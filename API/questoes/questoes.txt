@@ -1,0 +1,2505 @@
+Questão: Este teste consiste de apenas uma questão.
+Respostas:
+
+
+Questão: Este questionário é composto por duas questões.
+Respostas:
+
+
+Questão: Este questionário é composto por três questões.
+Respostas:
+
+
+Questão: O GCC, um dos principais compiladores para C++, utiliza um algoritmo de ordenação conhecido como IntroSort. Esse algoritmo é um híbrido entre o QuickSort, o HeapSort (um outro algoritmo que vamos ver na próxima aula) e o InsertionSort. O QuickSort é usado até um determinado nível da recursão ou até um determinado tamanho de vetor. Se o nível da recursão for maior que um limite, usa-se o HeapSort; se o número de elementos for pequeno, executa-se o InsertionSort.A seguir é apresentada uma implementação simplificada desse algoritmo.IntroSort(A)1 profundidade = 2*$$\lfloor log$$(A.tamanho) $$\rfloor$$2 IntroSortLoop(A, 1, A.tamanho, profundidade)IntroSortLoop(A, inicio, fim, profundidade)1 if fim - inicio < 102     InsertionSort(A, inicio, fim)3 else if profundidade == 04      HeapSort(A, inicio, fim)5 else6      pivo = Partition(A, inicio, fim)7      IntroSortLoop(A, {1:MULTICHOICE_S:~fim~pivo-1~pivo+1~pivo~1~%100%inicio}, {1:MULTICHOICE_S:~fim~inicio~pivo+1~pivo~1~%100%pivo-1}, {1:MULTICHOICE_S:~profundidade~profundidade+1~pivo~fim~%100%profundidade-1})8      IntroSortLoop(A, {1:MULTICHOICE_S:~fim~pivo-1~inicio~pivo~1~%100%pivo+1}, 
+{1:MULTICHOICE_S:~pivo-1~inicio~pivo+1~pivo~1~%100%fim}, 
+{1:MULTICHOICE_S:~profundidade~profundidade+1~pivo~fim~%100%profundidade-1})
+Respostas:
+1. inicio
+2. pivo-1
+3. profundidade-1
+4. pivo+1
+5. fim
+6. profundidade-1
+
+
+Questão: Considere duas filas Q1 e Q2 e as operações Enqueue(Q,k) e Dequeue(Q). Seus conteúdos iniciais são: Q1 = [ 1, 2, 3 ]    Q2 = [4, 5, 6] Em seguida são executadas as operações:Enqueue (Q1, 7)Enqueue (Q2, 8)As filas ficam, então, com os valores:Q1 = [7, 1, 2, 3 ]  Q2 = [8, 4, 5, 6]Em seguida são executadas as operações:Enqueue(Q2, Dequeue(Q1))Enqueue(Q2, 9)Enqueue(Q1, Dequeue(Q2)) Enqueue(Q2, Dequeue(Q1))Enqueue (Q1, 10)Dequeue (Q1)Dequeue (Q2)Se a partir deste ponto executarmos operações de dequeue nas duas filas até que fiquem vazias, podemos afirmar que:O primeiro elemento a ser retirado de Q1 será {1:NUMERICAL:=7}  e de Q2 será {1:NUMERICAL:=4}O último elemento a ser retirado de Q1 será {1:NUMERICAL:=10}   e de Q2 será {1:NUMERICAL:=2}
+Respostas:
+1. 7
+2. 4
+3. 10
+4. 2
+
+
+Questão: Considere duas filas Q1 e Q2 e as operações Enqueue(Q,k) e Dequeue(Q). Seus conteúdos iniciais são: Q1 = [ 1, 2, 3 ]    Q2 = [6, 5, 4] Em seguida são executadas as operações:Enqueue (Q1, 7)Enqueue (Q2, 8)As filas ficam, então, com os valores:Q1 = [7, 1, 2, 3 ]  Q2 = [8, 6, 5, 4]Em seguida são executadas as operações:Enqueue(Q2, Dequeue(Q1))Enqueue(Q2, 9)Enqueue(Q1, Dequeue(Q2)) Enqueue(Q2, Dequeue(Q1))Enqueue (Q1, 10)Dequeue (Q1)Dequeue (Q2)Se a partir deste ponto executarmos operações de dequeue nas duas filas até que fiquem vazias, podemos afirmar que:O primeiro elemento a ser retirado de Q1 será {2:NUMERICAL:=7}  e de Q2 será {2:NUMERICAL:=6}O último elemento a ser retirado de Q1 será {3:NUMERICAL:=10}   e de Q2 será {3:NUMERICAL:=2}
+Respostas:
+1. 7
+2. 6
+3. 10
+4. 2
+
+
+Questão: Considere duas filas Q1 e Q2 e as operações Enqueue(Q,k) e Dequeue(Q). Seus conteúdos iniciais são: Q1 = [ 8, 9, 10 ]    Q2 = [13, 12, 11]                                         Em seguida são executadas as operações:Enqueue (Q1, 14)Enqueue (Q2, 15)As filas ficam, então, com os valores:Q1 = [14, 8, 9, 10 ]  Q2 = [15, 13, 12, 11]Em seguida são executadas as operações:Enqueue(Q2, Dequeue(Q1))Enqueue(Q2, 16)Enqueue(Q1, Dequeue(Q2)) Enqueue(Q2, Dequeue(Q1))Enqueue (Q1, 17)Dequeue (Q1)Dequeue (Q2)Se a partir deste ponto executarmos operações de dequeue nas duas filas até que fiquem vazias, podemos afirmar que:O primeiro elemento a ser retirado de Q1 será {2:NUMERICAL:=14}  e de Q2 será {2:NUMERICAL:=13}O último elemento a ser retirado de Q1 será {3:NUMERICAL:=17}   e de Q2 será {3:NUMERICAL:=9}  
+Respostas:
+1. 14
+2. 13
+3. 17
+4. 9
+
+
+Questão: Considere uma fila implementada sobre uma lista ligada simples, na qual optou-se por inserir o último elemento da fila no final da lista. Nessas condições, a partir da fila vazia, considere a seguinte sequência de comandos:Enqueue(L, 1);Enqueue(L, 2);Dequeue(L);Enqueue(L, 3);Enqueue(L, 4);Enqueue(L, 5);Dequeue(L);Dequeue(L);Enqueue(L, Dequeue(L));Enqueue(L, L.inicio.chave + L.inicio.proximo.chave);Em relação à condição final da execução dos comandos:L.inicio.chave = {2:MCS:=5~1~2~3~4~6~7~8~9~10~NIL~ERRO}L.inicio.proximo.chave = {3:MCS:=4~1~2~3~5~6~7~8~9~10~NIL~ERRO}L.inicio.proximo.proximo.chave =  {3:MCS:=9~1~2~3~4~5~6~7~8~10~NIL~ERRO}L.inicio.proximo.proximo.proximo.chave ={2:MCS:NIL~1~2~3~4~5~6~7~8~9~10~=ERRO}
+Respostas:
+1. 5
+2. 4
+3. 9
+4. ERRO
+
+
+Questão: Considere uma fila implementada sobre uma lista ligada simples, na qual optou-se por inserir o último elemento da fila no final da lista. Nessas condições, a partir da fila vazia, considere a seguinte sequência de comandos:Enqueue(L, 5);Enqueue(L, 4);Dequeue(L);Enqueue(L, 3);Enqueue(L, 2);Enqueue(L, Dequeue(L));Enqueue(L, L.inicio.chave + L.inicio.proximo.chave);Enqueue(L, 1);Dequeue(L);Dequeue(L);Em relação à condição final da execução dos comandos:L.inicio.chave = {2:MCS:=4~1~2~3~5~6~7~8~9~10~NIL~ERRO}L.inicio.proximo.chave = {3:MCS:=5~1~2~3~4~6~7~8~9~10~NIL~ERRO}L.inicio.proximo.proximo.chave =  {3:MCS:=1~2~3~4~5~6~7~8~9~10~NIL~ERRO}L.inicio.proximo.proximo.proximo.chave ={2:MCS:NIL~1~2~3~4~5~6~7~8~9~10~=ERRO}
+Respostas:
+1. 4
+2. 5
+3. 1
+4. ERRO
+
+
+Questão: Considere uma fila implementada sobre uma lista ligada simples, na qual optou-se por inserir o último elemento da fila no final da lista. Nessas condições, a partir da fila vazia, considere a seguinte sequência de comandos:Enqueue(L, 3);Enqueue(L, 4);Dequeue(L);Enqueue(L, 2);Enqueue(L, 5);Enqueue(L, Dequeue(L));Enqueue(L, 1);Dequeue(L);Enqueue(L, L.inicio.chave + L.inicio.proximo.chave);Enqueue(L, Dequeue(L));Dequeue(L);Em relação à condição final da execução dos comandos:L.inicio.chave = {2:MCS:=1~2~3~4~5~6~7~8~9~10~NIL~ERRO}L.inicio.proximo.chave = {3:MCS:=9~1~2~3~4~5~6~7~8~10~NIL~ERRO}L.inicio.proximo.proximo.chave = {3:MCS:=5~1~2~3~4~6~7~8~9~10~NIL~ERRO}L.inicio.proximo.proximo.proximo.chave ={2:MCS:NIL~1~2~3~4~5~6~7~8~9~10~=ERRO}
+Respostas:
+1. 1
+2. 9
+3. 5
+4. ERRO
+
+
+Questão: Considere uma fila implementada sobre uma lista ligada simples, na qual optou-se por inserir o último elemento da fila no final da lista. Nessas condições, a partir da fila vazia, considere a seguinte sequência de comandos:Enqueue(L, 1);Enqueue(L, 2);Dequeue(L);Enqueue(L, 5);Enqueue(L, 4);Enqueue(L, Dequeue(L));Enqueue(L, 3);Enqueue(L, Dequeue(L));Dequeue(L);Dequeue(L);Enqueue(L, L.inicio.chave + L.inicio.proximo.chave);Em relação à condição final da execução dos comandos:L.inicio.chave = {2:MCS:=3~1~2~4~5~6~7~8~9~10~NIL~ERRO}L.inicio.proximo.chave = {3:MCS:=5~1~2~3~4~6~7~8~9~10~NIL~ERRO}L.inicio.proximo.proximo.chave = {3:MCS:=8~1~2~3~4~5~6~7~9~10~NIL~ERRO}L.inicio.proximo.proximo.proximo.chave ={2:MCS:NIL~1~2~3~4~5~6~7~8~9~10~=ERRO}
+Respostas:
+1. 3
+2. 5
+3. 8
+4. ERRO
+
+
+Questão: O algoritmo fazAlgo apresentado a seguir tem como entrada duas variáveis inteiras x e y, com y ≥ 0. O início de preenchimento da tabela de rastreamento do algoritmo encontra-se abaixo. A linha 1 da tabela de rastreamento indica os conteúdos imediatamente após a chamada do algoritmo, ANTES da execução do primeiro passo do algoritmo. Siga essa convenção para as chamadas de função. Termine a execução do rastreamento e complete as lacunas.O algoritmo terminou no passo do trace (PT) {2:NUMERICAL:=21} retornando o valor {3:NUMERICAL:=16}.  Nessa última linha temos os seguintes valores para: passo do algoritmo(PA) = {3:NUMERICAL:=5} e  variável p = {2:NUMERICAL:=4}.
+Respostas:
+1. 21
+2. 16
+3. 5
+4. 4
+
+
+Questão: O algoritmo fazAlgo apresentado a seguir tem como entrada duas variáveis inteiras x e y, com y ≥ 0. O início de preenchimento da tabela de rastreamento do algoritmo encontra-se abaixo. A linha 1 da tabela de rastreamento indica os conteúdos imediatamente após a chamada do algoritmo, ANTES da execução do primeiro passo do algoritmo. Siga essa convenção para as chamadas de função. Termine a execução do rastreamento e complete as lacunas.O algoritmo terminou no passo do trace (PT) {2:NUMERICAL:=21} retornando o valor {3:NUMERICAL:=32}.  Nessa última linha temos os seguintes valores para as colunas: passo do algoritmo(PA) = {3:NUMERICAL:=7} e  variável p = {2:NUMERICAL:=4}.
+Respostas:
+1. 21
+2. 32
+3. 7
+4. 4
+
+
+Questão: O algoritmo fazAlgo apresentado a seguir tem como entrada duas variáveis inteiras x e y, com y ≥ 0. O início de preenchimento da tabela de rastreamento do algoritmo encontra-se abaixo. A linha 1 da tabela de rastreamento indica os conteúdos imediatamente após a chamada do algoritmo, ANTES da execução do primeiro passo do algoritmo. Siga essa convenção para as chamadas de função. Termine a execução do rastreamento e complete as lacunas.O algoritmo terminou no passo do trace (PT) {2:NUMERICAL:=21} retornando o valor {3:NUMERICAL:=81}.  Nessa última linha temos os seguintes valores para as colunas: passo do algoritmo(PA) = {3:NUMERICAL:=5} e  variável p = {2:NUMERICAL:=9}.
+Respostas:
+1. 21
+2. 81
+3. 5
+4. 9
+
+
+Questão: O algoritmo fazAlgo apresentado a seguir tem como entrada duas variáveis inteiras x e y, com y ≥ 0. O início de preenchimento da tabela de rastreamento do algoritmo encontra-se abaixo. A linha 1 da tabela de rastreamento indica os conteúdos imediatamente após a chamada do algoritmo, ANTES da execução do primeiro passo do algoritmo. Siga essa convenção para as chamadas de função. Termine a execução do rastreamento e complete as lacunas.O algoritmo terminou no passo do trace (PT) {2:NUMERICAL:=21} retornando o valor {3:NUMERICAL:=243}.  Nessa última linha temos os seguintes valores para as colunas: passo do algoritmo(PA) = {3:NUMERICAL:=7} e  variável p = {2:NUMERICAL:=9}.
+Respostas:
+1. 21
+2. 243
+3. 7
+4. 9
+
+
+Questão: O algoritmo fazAlgo apresentado a seguir tem como entrada duas variáveis inteiras x e y, com y ≥ 0. O início de preenchimento da tabela de rastreamento do algoritmo encontra-se abaixo. A linha 1 da tabela de rastreamento indica os conteúdos imediatamente após a chamada do algoritmo, ANTES da execução do primeiro passo do algoritmo. Siga essa convenção para as chamadas de função. Termine a execução do rastreamento e complete as lacunas.O algoritmo terminou no passo do trace (PT) {2:NUMERICAL:=21} retornando o valor {3:NUMERICAL:=256}.  Nessa última linha temos os seguintes valores para as colunas: passo do algoritmo(PA) = {3:NUMERICAL:=5} e  variável p = {2:NUMERICAL:=16}.
+Respostas:
+1. 21
+2. 256
+3. 5
+4. 16
+
+
+Questão: O algoritmo fazAlgo apresentado a seguir tem como entrada duas variáveis inteiras x e y, com y ≥ 0. O início de preenchimento da tabela de rastreamento do algoritmo encontra-se abaixo. A linha 1 da tabela de rastreamento indica os conteúdos imediatamente após a chamada do algoritmo, ANTES da execução do primeiro passo do algoritmo. Siga essa convenção para as chamadas de função. Termine a execução do rastreamento e complete as lacunas.O algoritmo terminou no passo do trace (PT) {2:NUMERICAL:=21} retornando o valor {3:NUMERICAL:=1024}.  Nessa última linha temos os seguintes valores para as colunas: passo do algoritmo(PA) = {3:NUMERICAL:=7} e  variável p = {2:NUMERICAL:=16}.
+Respostas:
+1. 21
+2. 1024
+3. 7
+4. 16
+
+
+Questão: Considere o algoritmo a seguir.FazAlgo(S, valor)  // S é uma pilha1 if Stack-Empty(S)2         Push(S, valor)3 else  atual = Pop(S)4         FazAlgo(S, valor)5         Push(S, atual)Supondo a chamada FazAlgo (MinhaPilha, 4), estando a pilha MinhaPilha com os valores [1,2,3] nesta ordem (o topo da pilha contém 3), complete as afirmações a seguir:a) após execução completa da chamada, MinhaPilha conterá a seguinte sequência: {6:MCS:=[4,1,2,3]~[1,2,3,4]~[1,4,2,3]~[1,2,4,3]~[4,3,2,1]~[3,2,1,4]~[3,2,4,1]~[3,4,2,1]~[ ]~[4]~[1]~[2]~[3]}b) A função FazAlgo(S, valor) {4:MCS:=insere o valor no início de S ~insere o valor no topo de S ~deixa S apenas com o valor inserido ~insere o valor no meio de S ~não altera S ~não termina (recursão infinita) ~inverte S e insere o valor em seu topo ~inverte S e insere o valor em seu início ~deixa S vazia ~se S for vazia provoca erro de “stack underflow” } 
+Respostas:
+1. [4,1,2,3]
+2. insere o valor no início de S 
+
+
+Questão: Considere o algoritmo a seguir.FazAlgo(S, valor) // S é uma pilha1 if Stack-Empty(S)2         Push(S, valor)3 else  atual = Pop(S)4         FazAlgo(S, valor)5         Push(S, atual)Supondo a chamada FazAlgo (MinhaPilha, 1), estando a pilha MinhaPilha com os valores [4,3,2] nesta ordem (o topo da pilha contém 2), complete as afirmações a seguir:a) após execução completa da chamada, MinhaPilha conterá a seguinte sequência: {6:MCS:=[1,4,3,2]~[1,2,3,4]~[4,1,2,3]~[1,2,4,3]~[4,3,2,1]~[3,2,1,4]~[3,2,4,1]~[3,4,2,1]~[ ]~[4]~[1]~[2]~[3]}b) A função FazAlgo(S, valor) {4:MCS:=insere o valor no início de S ~insere o valor no topo de S ~deixa S apenas com o valor inserido ~insere o valor no meio de S ~não altera S ~não termina (recursão infinita) ~inverte S e insere o valor em seu topo ~inverte S e insere o valor em seu início ~deixa S vazia ~se S for vazia provoca erro de “stack underflow” }
+Respostas:
+1. [1,4,3,2]
+2. insere o valor no início de S 
+
+
+Questão: Considere o algoritmo a seguir.FazAlgo(S, valor) // S é uma pilha1 if Stack-Empty(S)2         Push(S, valor)3 else  atual = Pop(S)4         FazAlgo(S, valor)5         Push(S, atual)Supondo a chamada FazAlgo (MinhaPilha, 0), estando a pilha MinhaPilha com os valores [3,2,1] nesta ordem (o topo da pilha contém 1), complete as afirmações a seguir: a) após execução completa da chamada, MinhaPilha conterá a seguinte sequência: {6:MCS:=[0,3,2,1]~[1,2,3,0]~[0,1,2,3]~[1,2,0,3]~[1,0,2,3]~[3,2,1,0]~[3,2,0,1]~[3,0,2,1]~[ ]~[0]~[1]~[2]~[3]}b) A função FazAlgo(S, valor) {4:MCS:=insere o valor no início de S ~insere o valor no topo de S ~deixa S apenas com o valor inserido ~insere o valor no meio de S ~não altera S ~não termina (recursão infinita) ~inverte S e insere o valor em seu topo ~inverte S e insere o valor em seu início ~deixa S vazia ~se S for vazia provoca erro de “stack underflow” }
+Respostas:
+1. [0,3,2,1]
+2. insere o valor no início de S 
+
+
+Questão: Considere o algoritmo a seguir.FazAlgo(S1, S2) // S1 e S2 são pilhas1 if Stack-Empty(S1)2         return3 else  atual = Pop(S1)4         Push(S2, atual)5         FazAlgo(S1, S2)Supondo a chamada FazAlgo (MinhaPilha, SuaPilha), estando a pilha MinhaPilha com os valores [1,2,3] nesta ordem (o topo da pilha contém 3) e a pilha SuaPilha com os valores [4,5,6] nesta ordem (o topo da pilha contém 6), após sua execução:a) a pilha MinhaPilha conterá a sequência {4:MCS:=[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[4,5,6,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4,5,6,1,2,3]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}b) a pilha SuaPilha conterá a sequência {6:MCS:=[4,5,6,3,2,1]~[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[6,5,4,1,2,3]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4,5,6,1,2,3]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}
+Respostas:
+1. []
+2. [4,5,6,3,2,1]
+
+
+Questão: Considere o algoritmo a seguir.FazAlgo(S1, S2) // S1 e S2 são pilhas1 if Stack-Empty(S1)2         return3 else  atual = Pop(S1)4         Push(S2, atual)5         FazAlgo(S1, S2)Supondo a chamada FazAlgo (MinhaPilha, SuaPilha), estando a pilha MinhaPilha com os valores [3,2,1] nesta ordem (o topo da pilha contém 1) e a pilha SuaPilha com os valores [6,5,4] nesta ordem (o topo da pilha contém 4), após sua execução:a) a pilha MinhaPilha conterá a sequência {4:MCS:=[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[4,5,6,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4,5,6,1,2,3]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}b) a pilha SuaPilha conterá a sequência {6:MCS:=[6,5,4,1,2,3]~[4,5,6,3,2,1]~[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4,5,6,1,2,3]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}
+Respostas:
+1. []
+2. [6,5,4,1,2,3]
+
+
+Questão: Considere o algoritmo a seguir.FazAlgo(S1, S2) // S1 e S2 são pilhas1 if Stack-Empty(S1)2         return3 else  atual = Pop(S1)4         FazAlgo(S1, S2)5         Push(S2, atual)Supondo a chamada FazAlgo (MinhaPilha, SuaPilha), estando a pilha MinhaPilha com os valores [1,2,3] nesta ordem (o topo da pilha contém 3) e a pilha SuaPilha com os valores [4,5,6] nesta ordem (o topo da pilha contém 6), após sua execução:a) a pilha MinhaPilha conterá a sequência {4:MCS:=[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[4,5,6,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4,5,6,1,2,3]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}b) a pilha SuaPilha conterá a sequência {6:MCS:=[4,5,6,1,2,3]~[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[6,5,4,1,2,3]~[4,5,6,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}
+Respostas:
+1. []
+2. [4,5,6,1,2,3]
+
+
+Questão: Considere o algoritmo a seguir.FazAlgo(S1, S2)  // S1 e S2 são pilhas1 if Stack-Empty(S1)2         return3 else  atual = Pop(S1)4         FazAlgo(S1, S2)5         Push(S2, atual)Supondo a chamada FazAlgo (MinhaPilha, SuaPilha), estando a pilha MinhaPilha com os valores [3,2,1] nesta ordem (o topo da pilha contém 1) e a pilha SuaPilha com os valores [6,5,4] nesta ordem (o topo da pilha contém 4), após sua execução:a) a pilha MinhaPilha conterá a sequência {4:MCS:=[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[4,5,6,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4,5,6,1,2,3]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}b) a pilha SuaPilha conterá a sequência {6:MCS:=[6,5,4,3,2,1]~[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[4,5,6,1,2,3]~[6,5,4,1,2,3]~[4,5,6,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}
+Respostas:
+1. []
+2. [6,5,4,3,2,1]
+
+
+Questão: Considere o algoritmo de busca binária. Considere o vetor  L1 =  (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Busca-Binaria (L1, 6), indique quais deveriam ser os conteúdos das variáveis no exato momento em que a instrução de RETURN estivesse para ser executada:esquerda = {3:NUMERICAL:=4},direita      = {3:NUMERICAL:=4}, meio        = {4:NUMERICAL:=4}.
+Respostas:
+1. 4
+2. 4
+3. 4
+
+
+Questão: Considere o algoritmo de busca binária. Considere o vetor  L1 =  (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Busca-Binaria (L1, 5), indique quais deveriam ser os conteúdos das variáveis no exato momento em que a instrução de RETURN estivesse para ser executada:esquerda = {3:NUMERICAL:=4},direita      = {3:NUMERICAL:=4}, meio        = {4:NUMERICAL:=4}.
+Respostas:
+1. 4
+2. 4
+3. 4
+
+
+Questão: Considere o algoritmo de busca binária. Considere o vetor  L1 =  (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Busca-Binaria (L1, 4), indique quais deveriam ser os conteúdos das variáveis no exato momento em que a instrução de RETURN estivesse para ser executada:esquerda = {3:NUMERICAL:=1},direita      = {3:NUMERICAL:=6}, meio        = {4:NUMERICAL:=3}.
+Respostas:
+1. 1
+2. 6
+3. 3
+
+
+Questão: Considere o algoritmo de busca binária. Considere o vetor  L1 =  (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Busca-Binaria (L1, 5), indique quais deveriam ser os conteúdos das variáveis no exato momento em que a instrução de RETURN estivesse para ser executada:esquerda = {3:NUMERICAL:=1},direita      = {3:NUMERICAL:=6}, meio        = {4:NUMERICAL:=3}.
+Respostas:
+1. 1
+2. 6
+3. 3
+
+
+Questão: Considere o algoritmo de busca binária. Considere o vetor  L1 =  (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Busca-Binaria (L1, 5), indique quais deveriam ser os conteúdos das variáveis no exato momento em que a instrução de RETURN estivesse para ser executada:esquerda = {3:NUMERICAL:=4},direita      = {3:NUMERICAL:=3}, meio        = {4:NUMERICAL:=4}.
+Respostas:
+1. 4
+2. 3
+3. 4
+
+
+Questão: Considere o algoritmo de ordenação por inserção. Considere o vetor  L2 =   (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Insertion-Sort(L2), indique quais deveriam ser os conteúdos das variáveis no exato momento em que a instrução da linha 7 acabou de ser executada pela segunda vez:j         = {2:NUMERICAL:=3},i         = {2:NUMERICAL:=0}, chave = {3:NUMERICAL:=3},L2 [3] =  {3:NUMERICAL:=5}.
+Respostas:
+1. 3
+2. 0
+3. 3
+4. 5
+
+
+Questão: Considere o algoritmo de ordenação por inserção. Considere o vetor  L2 =   (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Insertion-Sort(L2), indique quais deveriam ser os conteúdos das variáveis no exato momento em que a instrução da linha 7 acabou de ser executada pela segunda vez:j         = {2:NUMERICAL:=3},i         = {2:NUMERICAL:=0}, chave = {3:NUMERICAL:=4},L2 [3] =  {3:NUMERICAL:=6}.
+Respostas:
+1. 3
+2. 0
+3. 4
+4. 6
+
+
+Questão: Considere o algoritmo de ordenação por inserção. Considere o vetor  L2 =   (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Insertion-Sort(L2), indique quais deveriam ser os conteúdos das variáveis no exato momento em que a instrução da linha 7 acabou de ser executada pela segunda vez:j         = {2:NUMERICAL:=3},i         = {2:NUMERICAL:=0}, chave = {3:NUMERICAL:=5},L2 [3] =  {3:NUMERICAL:=7}.
+Respostas:
+1. 3
+2. 0
+3. 5
+4. 7
+
+
+Questão: Considere o algoritmo de ordenação por inserção. Considere o vetor  L2 =   (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Insertion-Sort(L2), indique quais deveriam ser os conteúdos das variáveis no exato momento em que a instrução da linha 7 acabou de ser executada pela segunda vez:j         = {2:NUMERICAL:=3},i         = {2:NUMERICAL:=0}, chave = {3:NUMERICAL:=6},L2 [3] =  {3:NUMERICAL:=8}.
+Respostas:
+1. 3
+2. 0
+3. 6
+4. 8
+
+
+Questão: Considere o algoritmo de ordenação por inserção. Considere o vetor  L2 =   (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Insertion-Sort(L2), indique quais deveriam ser os conteúdos das variáveis no exato momento em que a instrução da linha 7 acabou de ser executada pela segunda vez:j         = {2:NUMERICAL:=3},i         = {2:NUMERICAL:=0}, chave = {3:NUMERICAL:=7},L2 [3] =  {3:NUMERICAL:=9}.
+Respostas:
+1. 3
+2. 0
+3. 7
+4. 9
+
+
+Questão: Considere o algoritmo de ordenação por seleção. Considere o vetor  L3 =   (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Selection-Sort(L3), indique o conteúdo de L3 no exato momento em que a instrução da linha 8 acabou de ser executada pela segunda vez:L3 = [ {1:NUMERICAL:=0}, {1:NUMERICAL:=1}, {1:NUMERICAL:=3}, {1:NUMERICAL:=2}, {1:NUMERICAL:=4} , {1:NUMERICAL:=5} ]
+Respostas:
+1. 0
+2. 1
+3. 3
+4. 2
+5. 4
+6. 5
+
+
+Questão: Considere o algoritmo de ordenação por seleção. Considere o vetor  L3 =(os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Selection-Sort(L3), indique o conteúdo de L3 no exato momento em que a instrução da linha 8 acabou de ser executada pela segunda vez:L3 = [ {1:NUMERICAL:=1}, {1:NUMERICAL:=2}, {1:NUMERICAL:=4}, {1:NUMERICAL:=3}, {1:NUMERICAL:=5} , {1:NUMERICAL:=6} ]
+Respostas:
+1. 1
+2. 2
+3. 4
+4. 3
+5. 5
+6. 6
+
+
+Questão: Considere o algoritmo de ordenação por seleção. Considere o vetor  L3 = (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Selection-Sort(L3), indique o conteúdo de L3 no exato momento em que a instrução da linha 8 acabou de ser executada pela segunda vez:L3 = [ {1:NUMERICAL:=2}, {1:NUMERICAL:=3}, {1:NUMERICAL:=5}, {1:NUMERICAL:=4}, {1:NUMERICAL:=6} , {1:NUMERICAL:=7} ]
+Respostas:
+1. 2
+2. 3
+3. 5
+4. 4
+5. 6
+6. 7
+
+
+Questão: Considere o algoritmo de ordenação por seleção. Considere o vetor  L3 = (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Selection-Sort(L3), indique o conteúdo de L3 no exato momento em que a instrução da linha 8 acabou de ser executada pela segunda vez:L3 = [ {1:NUMERICAL:=3}, {1:NUMERICAL:=4}, {1:NUMERICAL:=6}, {1:NUMERICAL:=5}, {1:NUMERICAL:=7} , {1:NUMERICAL:=8} ]
+Respostas:
+1. 3
+2. 4
+3. 6
+4. 5
+5. 7
+6. 8
+
+
+Questão: Considere o algoritmo de ordenação por seleção. Considere o vetor  L3 = (os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).Supondo a execução do algoritmo Selection-Sort(L3), indique o conteúdo de L3 no exato momento em que a instrução da linha 8 acabou de ser executada pela segunda vez:L3 = [ {1:NUMERICAL:=4}, {1:NUMERICAL:=5}, {1:NUMERICAL:=7}, {1:NUMERICAL:=6}, {1:NUMERICAL:=8} , {1:NUMERICAL:=9} ]
+Respostas:
+1. 4
+2. 5
+3. 7
+4. 6
+5. 8
+6. 9
+
+
+Questão: Considere as afirmações abaixo e diga se são verdadeiras ou falsasSe um algoritmo é $$\Theta(lg n)$$ então ele é $$\Omega (lg n)$$ e $$O (lg n)$$.  {1:MULTICHOICE_S:~falsa~%100%verdadeira}Se o tempo de execução de um algoritmo é modelado por $$T(n) = 3n^2 + 2n^3$$ podemos afirmar que ele é $$\Theta(n^2)$$ e $$O(n^3)$$. {1:MULTICHOICE_S:~verdadeira~%100%falsa} Se um algoritmo é $$O(nlgn)$$ então ele é $$O(n^2)$$. {1:MULTICHOICE_S:~falsa~%100%verdadeira}Se um algoritmo é $$\Omega(nlgn)$$ então ele é $$\Omega(n)$$. {1:MULTICHOICE_S:~falsa~%100%verdadeira}
+Respostas:
+1. verdadeira
+2. falsa
+3. verdadeira
+4. verdadeira
+
+
+Questão: Considere as afirmações abaixo e diga se são verdadeiras ou falsasSe um algoritmo é $$\Omega (nlg n)$$ e $$O (nlg n)$$ então ele é $$\Theta(nlg n)$$  {1:MULTICHOICE_S:~falsa~%100%verdadeira} Se um algoritmo é $$O(\sqrt n)$$ então ele é $$O(n)$$. {1:MULTICHOICE_S:~falsa~%100%verdadeira}Se o tempo de execução de um algoritmo é modelado por $$T(n) = n^2lgn + 
+2n^3$$ podemos afirmar que ele é $$\Theta(n^2lgn)$$ e 
+$$O(n^3)$$. {1:MULTICHOICE_S:~verdadeira~%100%falsa}Se um algoritmo é $$\Omega(lgn)$$ então ele é $$\Omega(n)$$. {1:MULTICHOICE_S:~verdadeira~%100%falsa}
+Respostas:
+1. verdadeira
+2. verdadeira
+3. falsa
+4. falsa
+
+
+Questão: Considere as afirmações abaixo e diga se são verdadeiras ou falsas Se um algoritmo é $$\Theta(\sqrt n)$$ então ele é $$O(n)$$. {1:MULTICHOICE_S:~falsa~%100%verdadeira}Se o tempo de execução de um algoritmo é modelado por $$T(n) = n^3(lgn + 1)$$ podemos afirmar que ele é $$\Theta(n^3)$$. {1:MULTICHOICE_S:~verdadeira~%100%falsa}Se um algoritmo é $$\Omega(n^3)$$ então ele é $$\Omega(n^4)$$. {1:MULTICHOICE_S:~verdadeira~%100%falsa}Se um algoritmo é $$\Omega (2^n)$$ e $$O (2^n)$$ então ele é $$\Theta(2^n)$$  {1:MULTICHOICE_S:~falsa~%100%verdadeira}
+Respostas:
+1. verdadeira
+2. falsa
+3. falsa
+4. verdadeira
+
+
+Questão: Considere as afirmações abaixo e diga se são verdadeiras ou falsasSe um algoritmo é $$\Omega(n^3)$$ então ele é $$\Omega(n^4)$$. {1:MULTICHOICE_S:~verdadeira~%100%falsa}Se um algoritmo é $$\Omega (n^2 lg n)$$ e $$O (n^2 lg n)$$ então ele é $$\Theta(n^2 lg n)$$  {1:MULTICHOICE_S:~falsa~%100%verdadeira} Se um algoritmo é $$\Theta(\sqrt {n^3})$$ então ele é $$O(n)$$. {1:MULTICHOICE_S:~verdadeira~%100%falsa}Se o tempo de execução de um algoritmo é modelado por $$T(n) = n^2(\sqrt n +
+ 1)$$ podemos afirmar que ele é 
+$$\Theta(n^{2,5})$$. {1:MULTICHOICE_S:~falsa~%100%verdadeira}
+Respostas:
+1. falsa
+2. verdadeira
+3. n^3
+4. falsa
+5. 2,5
+6. verdadeira
+
+
+Questão: Considere o algoritmo LetsRock(n), que chama o algoritmo Amplificar(n) internamente. Obs: n^a significa na O número de vezes que a linha 3 de Amplificar(n) é executado é $$\Theta$$({2:MULTICHOICE_S:~nlg n~lg n~n^4~n^3~n^2~%100%n} )O número de vezes que a linha 3 de LetsRock(n) é executado é  $$\Theta$$( {4:MULTICHOICE_S:n^2*lg n~n*lg n~lg n~n^6~n^5~n^4~n^3~n~%100%n^2}  )
+Respostas:
+1. n
+2. n^2
+
+
+Questão: Considere o algoritmo LetsRock(n), que chama o algoritmo Amplificar(n) internamente. Obs: n^a significa na O número de vezes que a linha 3 de Amplificar(n) é executado é $$\Theta$$({2:MULTICHOICE_S:~nlg n~lg n~n^4~n^3~n^2~%100%n})O número de vezes que a linha 3 de LetsRock(n) é executado é  $$\Theta$$( {4:MULTICHOICE_S:n^2*lg n~n*lg n~lg n~n^6~n^5~n^4~n^2~n~%100%n^3} )
+Respostas:
+1. n
+2. n^3
+
+
+Questão: Considere o algoritmo LetsRock(n), que chama o algoritmo Amplificar(n) internamente. Obs: n^a significa na O número de vezes que a linha 3 de Amplificar(n) é executado é $$\Theta$$({2:MULTICHOICE_S:~nlg n~lg n~n^4~n^3~n^2~%100%n})O número de vezes que a linha 3 de LetsRock(n) é executado é  $$\Theta$$( {4:MULTICHOICE_S:n^2*lg n~n*lg n~lg n~n^6~n^5~n^4~n^3~n^2~%100%n}  )
+Respostas:
+1. n
+2. n
+
+
+Questão: Considere o algoritmo LetsRock(n), que chama o algoritmo Amplificar(n) internamente. Obs: n^a significa na O número de vezes que a linha 3 de Amplificar(n) é executado é $$\Theta$$({2:MULTICHOICE_S:~nlg n~lg n~n^4~n^3~n^2~%100%n} )O número de vezes que a linha 3 de LetsRock(n) é executado é  $$\Theta$$( {4:MULTICHOICE_S:n^2*lg n~n*lg n~lg n~n^6~n^5~n^2~n^3~n~%100%n^4} )
+Respostas:
+1. n
+2. n^4
+
+
+Questão: Considere o algoritmo LetsRock(n), que chama o algoritmo Amplificar(n) internamente. Obs: n^a significa na O número de vezes que a linha 3 de Amplificar(n) é executado é $$\Theta$$({2:MULTICHOICE_S:~nlg n~lg n~n^4~n^3~n^2~%100%n} )O número de vezes que a linha 3 de LetsRock(n) é executado é  $$\Theta$$( {4:MULTICHOICE_S:~n^4~n*lg n~lg n~n^6~n^5~n^2~n^3~n~%100%n^2*lg n} )
+Respostas:
+1. n
+2. n^2*lg n
+
+
+Questão: Suponha que o algoritmo MergeSort seja executado sobre o vetor A = [6, 1, 7, 2, 6, 4, 2, 5]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 2ª chamada do método Merge.
+
+
+
+A =
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+{1:MCS:=1~2~3~4~5~6~7}
+{1:MCS:1~2~3~4~5~=6~7}
+{1:MCS:1~=2~3~4~5~6~7}
+{1:MCS:1~2~3~4~5~6~=7}
+{1:MCS:1~2~3~4~5~=6~7}
+{1:MCS:1~2~3~=4~5~6~7}
+{1:MCS:1~=2~3~4~5~6~7}
+{1:MCS:1~2~3~4~=5~6~7}
+
+
+
+Respostas:
+1. 1
+2. 6
+3. 2
+4. 7
+5. 6
+6. 4
+7. 2
+8. 5
+
+
+Questão: Suponha que o algoritmo MergeSort seja executado sobre o vetor A = [2, 3, 5, 4, 7, 5, 1, 6]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 2ª chamada do método Merge.
+
+
+
+A =
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+{1:MCS:1~=2~3~4~5~6~7}{1:MCS:1~2~=3~4~5~6~7}{1:MCS:1~2~3~=4~5~6~7}{1:MCS:1~2~3~4~=5~6~7}{1:MCS:1~2~3~4~5~6~=7}{1:MCS:1~2~3~4~=5~6~7}{1:MCS:=1~2~3~4~5~6~7}{1:MCS:1~2~3~4~5~=6~7}
+
+
+
+Respostas:
+1. 2
+2. 3
+3. 4
+4. 5
+5. 7
+6. 5
+7. 1
+8. 6
+
+
+Questão: Suponha que o algoritmo MergeSort seja executado sobre o vetor A = [7, 1, 3, 4, 5, 4, 6, 2]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 2ª chamada do método Merge.
+
+
+
+A =
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+{1:MCS:=1~2~3~4~5~6~7}{1:MCS:1~2~3~4~5~6~=7}{1:MCS:1~2~=3~4~5~6~7}{1:MCS:1~2~3~=4~5~6~7}{1:MCS:1~2~3~4~=5~6~7}{1:MCS:1~2~3~=4~5~6~7}{1:MCS:1~2~3~4~5~=6~7}{1:MCS:1~=2~3~4~5~6~7}
+
+
+
+Respostas:
+1. 1
+2. 7
+3. 3
+4. 4
+5. 5
+6. 4
+7. 6
+8. 2
+
+
+Questão: Suponha que o algoritmo MergeSort seja executado sobre o vetor A = [6, 7, 2, 1, 5, 1, 2, 4]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 2ª chamada do método Merge.
+
+
+
+A =
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+{1:MCS:1~2~3~4~5~=6~7}{1:MCS:1~2~3~4~5~6~=7}{1:MCS:=1~2~3~4~5~6~7}{1:MCS:1~=2~3~4~5~6~7}{1:MCS:1~2~3~4~=5~6~7}{1:MCS:=1~2~3~4~5~6~7}{1:MCS:1~=2~3~4~5~6~7}{1:MCS:1~2~3~=4~5~6~7}
+
+
+
+Respostas:
+1. 6
+2. 7
+3. 1
+4. 2
+5. 5
+6. 1
+7. 2
+8. 4
+
+
+Questão: Suponha que o algoritmo MergeSort seja executado sobre o vetor A = [6, 1, 7, 2, 6, 4, 2, 5]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 3ª chamada do método Merge.
+
+
+
+A =
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+{1:MCS:=1~2~3~4~5~6~7}{1:MCS:1~=2~3~4~5~6~7}{1:MCS:1~2~3~4~5~=6~7}{1:MCS:1~2~3~4~5~6~=7}{1:MCS:1~2~3~4~5~=6~7}{1:MCS:1~2~3~=4~5~6~7}{1:MCS:1~=2~3~4~5~6~7}{1:MCS:1~2~3~4~=5~6~7}
+
+
+
+Respostas:
+1. 1
+2. 2
+3. 6
+4. 7
+5. 6
+6. 4
+7. 2
+8. 5
+
+
+Questão: Suponha que o algoritmo MergeSort seja executado sobre o vetor A = [2, 3, 5, 4, 7, 5, 1, 6]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 3ª chamada do método Merge.
+
+
+
+A =
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+{1:MCS:1~=2~3~4~5~6~7}{1:MCS:1~2~=3~4~5~6~7}{1:MCS:1~2~3~=4~5~6~7}{1:MCS:1~2~3~4~=5~6~7}{1:MCS:1~2~3~4~5~6~=7}{1:MCS:1~2~3~4~=5~6~7}{1:MCS:=1~2~3~4~5~6~7}{1:MCS:1~2~3~4~5~=6~7}
+
+
+
+Respostas:
+1. 2
+2. 3
+3. 4
+4. 5
+5. 7
+6. 5
+7. 1
+8. 6
+
+
+Questão: Suponha que o algoritmo MergeSort seja executado sobre o vetor A = [7, 1, 3, 4, 5, 4, 6, 2]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 3ª chamada do método Merge.
+
+
+
+A =
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+{1:MCS:=1~2~3~4~5~6~7}{1:MCS:1~2~=3~4~5~6~7}{1:MCS:1~2~3~=4~5~6~7}{1:MCS:1~2~3~4~5~6~=7}{1:MCS:1~2~3~4~=5~6~7}{1:MCS:1~2~3~=4~5~6~7}{1:MCS:1~2~3~4~5~=6~7}{1:MCS:1~=2~3~4~5~6~7}
+
+
+
+Respostas:
+1. 1
+2. 3
+3. 4
+4. 7
+5. 5
+6. 4
+7. 6
+8. 2
+
+
+Questão: Suponha que o algoritmo MergeSort seja executado sobre o vetor A = [6, 7, 2, 1, 5, 1, 2, 4]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 3ª chamada do método Merge.
+
+
+
+A =
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+{1:MCS:=1~2~3~4~5~6~7}{1:MCS:1~=2~3~4~5~6~7}{1:MCS:1~2~3~4~5~=6~7}{1:MCS:1~2~3~4~5~6~=7}{1:MCS:1~2~3~4~=5~6~7}{1:MCS:=1~2~3~4~5~6~7}{1:MCS:1~=2~3~4~5~6~7}{1:MCS:1~2~3~=4~5~6~7}
+
+
+
+Respostas:
+1. 1
+2. 2
+3. 6
+4. 7
+5. 5
+6. 1
+7. 2
+8. 4
+
+
+Questão: Considere a ordenação do vetor A = [2, 5, 0, 4, 1, 3] com o algoritmo Quicksort.   Após a 1a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~5~4~3~1~0~%100%2}, {1:MULTICHOICE_S:~5~4~3~1~2~%100%0}, {1:MULTICHOICE_S:~5~4~3~0~2~%100%1}, {1:MULTICHOICE_S:~5~4~1~0~2~%100%3}, {1:MULTICHOICE_S:~3~4~1~0~2~%100%5}, {1:MULTICHOICE_S:~3~5~1~0~2~%100%4}]Após a 2a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~5~4~3~1~2~%100%0}, {1:MULTICHOICE_S:~5~4~3~0~2~%100%1}, {1:MULTICHOICE_S:~5~4~3~0~1~%100%2}, {1:MULTICHOICE_S:~5~4~1~0~2~%100%3}, {1:MULTICHOICE_S:~3~4~1~0~2~%100%5}, {1:MULTICHOICE_S:~3~5~1~0~2~%100%4}]
+Respostas:
+1. 2
+2. 0
+3. 1
+4. 3
+5. 5
+6. 4
+7. 0
+8. 1
+9. 2
+10. 3
+11. 5
+12. 4
+
+
+Questão: Considere a ordenação do vetor A = [12, 15, 10, 14, 11, 13] com o algoritmo Quicksort.   Após a 1a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~15~14~13~11~10~%100%12}, {1:MULTICHOICE_S:~15~14~13~11~12~%100%10}, {1:MULTICHOICE_S:~15~14~13~10~12~%100%11}, {1:MULTICHOICE_S:~15~14~11~10~12~%100%13}, {1:MULTICHOICE_S:~13~14~11~10~12~%100%15}, {1:MULTICHOICE_S:~13~15~11~10~12~%100%14}]Após a 2a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~15~14~13~11~12~%100%10}, {1:MULTICHOICE_S:~15~14~13~10~12~%100%11}, {1:MULTICHOICE_S:~15~14~13~10~11~%100%12}, {1:MULTICHOICE_S:~15~14~11~10~12~%100%13}, {1:MULTICHOICE_S:~13~14~11~10~12~%100%15}, {1:MULTICHOICE_S:~13~15~11~10~12~%100%14}]
+Respostas:
+1. 12
+2. 10
+3. 11
+4. 13
+5. 15
+6. 14
+7. 10
+8. 11
+9. 12
+10. 13
+11. 15
+12. 14
+
+
+Questão: Considere a ordenação do vetor A = [4, 10, 0, 8, 2, 6] com o algoritmo Quicksort.   Após a 1a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~10~8~6~2~0~%100%4}, {1:MULTICHOICE_S:~10~8~6~2~4~%100%0}, {1:MULTICHOICE_S:~10~8~6~0~4~%100%2}, {1:MULTICHOICE_S:~10~8~2~0~4~%100%6}, {1:MULTICHOICE_S:~6~8~2~0~4~%100%10}, {1:MULTICHOICE_S:~6~10~2~0~4~%100%8}]Após a 2a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~10~8~6~2~4~%100%0}, {1:MULTICHOICE_S:~10~8~6~0~4~%100%2}, {1:MULTICHOICE_S:~10~8~6~2~0~%100%4},{1:MULTICHOICE_S:~10~8~2~0~4~%100%6}, {1:MULTICHOICE_S:~6~8~2~0~4~%100%10}, {1:MULTICHOICE_S:~6~10~2~0~4~%100%8}]
+Respostas:
+1. 4
+2. 0
+3. 2
+4. 6
+5. 10
+6. 8
+7. 0
+8. 2
+9. 4
+10. 6
+11. 10
+12. 8
+
+
+Questão: Considere a ordenação do vetor A = [6, 9, 4, 8, 5, 7] com o algoritmo Quicksort.   Após a 1a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~4~5~7~9~8~%100%6}, {1:MULTICHOICE_S:~6~5~7~9~8~%100%4}, {1:MULTICHOICE_S:~6~4~7~9~8~%100%5}, {1:MULTICHOICE_S:~6~4~5~9~8~%100%7}, {1:MULTICHOICE_S:~6~4~5~7~8~%100%9}, {1:MULTICHOICE_S:~6~4~5~7~9~%100%8} ]Após a 2a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~6~5~7~9~8~%100%4}, 
+{1:MULTICHOICE_S:~6~4~7~9~8~%100%5}, 
+{1:MULTICHOICE_S:~5~4~7~9~8~%100%6}, 
+{1:MULTICHOICE_S:~6~4~5~9~8~%100%7}, {1:MULTICHOICE_S:~6~4~5~7~8~%100%9}, {1:MULTICHOICE_S:~6~4~5~7~9~%100%8} ]
+Respostas:
+1. 6
+2. 4
+3. 5
+4. 7
+5. 9
+6. 8
+7. 4
+8. 5
+9. 6
+10. 7
+11. 9
+12. 8
+
+
+Questão: Considere a ordenação do vetor A = [1, 4, 0, 3, 1, 2] com o algoritmo Quicksort.   Após a 1a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~4~3~2~0~%100%1}, {1:MULTICHOICE_S:~4~3~2~1~%100%0}, {1:MULTICHOICE_S:~4~3~2~0~%100%1}, {1:MULTICHOICE_S:~4~3~0~1~%100%2}, {1:MULTICHOICE_S:~0~3~2~1~%100%4}, {1:MULTICHOICE_S:~4~0~2~1~%100%3}]Após a 2a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~4~3~2~%100%1~0}, {1:MULTICHOICE_S:~4~3~2~%100%0~1}, {1:MULTICHOICE_S:~4~3~2~0~%100%1}, {1:MULTICHOICE_S:~4~3~1~0~%100%2}, {1:MULTICHOICE_S:~1~3~2~0~%100%4}, {1:MULTICHOICE_S:~4~1~2~0~%100%3}]
+Respostas:
+1. 1
+2. 0
+3. 1
+4. 2
+5. 4
+6. 3
+7. 1
+8. 0
+9. 1
+10. 2
+11. 4
+12. 3
+
+
+Questão: Considere a ordenação do vetor A = [2, 4, 0, 4, 1, 3] com o algoritmo Quicksort.   Após a 1a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~4~3~1~0~%100%2}, {1:MULTICHOICE_S:~4~3~1~2~%100%0}, {1:MULTICHOICE_S:~4~3~0~2~%100%1}, {1:MULTICHOICE_S:~4~1~0~2~%100%3}, {1:MULTICHOICE_S:~3~1~0~2~%100%4}, {1:MULTICHOICE_S:~3~1~0~2~%100%4}]Após a 2a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~4~3~1~2~%100%0}, {1:MULTICHOICE_S:~4~3~0~2~%100%1}, {1:MULTICHOICE_S:~4~3~0~1~%100%2}, {1:MULTICHOICE_S:~4~1~0~2~%100%3}, {1:MULTICHOICE_S:~3~1~0~2~%100%4}, {1:MULTICHOICE_S:~3~1~0~2~%100%4}]
+Respostas:
+1. 2
+2. 0
+3. 1
+4. 3
+5. 4
+6. 4
+7. 0
+8. 1
+9. 2
+10. 3
+11. 4
+12. 4
+
+
+Questão: Considere a ordenação do vetor A = [12, 18, 10, 14, 11, 13] com o algoritmo Quicksort.   Após a 1a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~18~14~13~11~10~%100%12}, {1:MULTICHOICE_S:~18~14~13~11~12~%100%10}, {1:MULTICHOICE_S:~18~14~13~10~12~%100%11}, {1:MULTICHOICE_S:~18~14~11~10~12~%100%13}, {1:MULTICHOICE_S:~13~14~11~10~12~%100%18}, {1:MULTICHOICE_S:~13~18~11~10~12~%100%14}]Após a 2a execução do algoritmo Partition a configuração do vetor A será: [{1:MULTICHOICE_S:~18~14~13~11~12~%100%10}, {1:MULTICHOICE_S:~18~14~13~10~12~%100%11}, {1:MULTICHOICE_S:~18~14~13~10~11~%100%12}, {1:MULTICHOICE_S:~18~14~11~10~12~%100%13}, {1:MULTICHOICE_S:~13~14~11~10~12~%100%18}, {1:MULTICHOICE_S:~13~18~11~10~12~%100%14}]
+Respostas:
+1. 12
+2. 10
+3. 11
+4. 13
+5. 18
+6. 14
+7. 10
+8. 11
+9. 12
+10. 13
+11. 18
+12. 14
+
+
+Questão: O GCC, um dos principais compiladores para C++, utiliza um algoritmo de ordenação conhecido como IntroSort. Esse algoritmo é um híbrido entre o QuickSort, o HeapSort (um outro algoritmo que vamos ver na próxima aula) e o InsertionSort. O QuickSort é usado até um determinado nível da recursão ou até um determinado tamanho de vetor. Se o nível da recursão for maior que um limite, usa-se o HeapSort; se o número de elementos for pequeno, executa-se o InsertionSort.A seguir é apresentada uma implementação simplificada desse algoritmo.IntroSort(A)1 profundidade = 2*$$\lfloor log$$(A.tamanho) $$\rfloor$$2 IntroSortLoop(A, 1, A.tamanho, profundidade)IntroSortLoop(A, inicio, fim, profundidade)1 if fim - inicio < 102     InsertionSort(A, inicio, fim)3 else if profundidade == 04      HeapSort(A, inicio, fim)5 else6      pivo = Partition(A, inicio, fim)7      IntroSortLoop(A, {1:MULTICHOICE_S:~fim~pivo-1~pivo+1~pivo~1~%100%inicio}, {1:MULTICHOICE_S:~fim~inicio~pivo+1~pivo~1~%100%pivo-1}, {1:MULTICHOICE_S:~profundidade~profundidade+1~pivo~fim~%100%profundidade-1})8      IntroSortLoop(A, {1:MULTICHOICE_S:~fim~pivo-1~inicio~pivo~1~%100%pivo+1}, 
+{1:MULTICHOICE_S:~pivo-1~inicio~pivo+1~pivo~1~%100%fim}, 
+{1:MULTICHOICE_S:~profundidade~profundidade+1~pivo~fim~%100%profundidade-1})
+Respostas:
+1. inicio
+2. pivo-1
+3. profundidade-1
+4. pivo+1
+5. fim
+6. profundidade-1
+
+
+Questão: Suponha que o algoritmo HeapSort seja executado sobre um vetor A.Suponha que, no momento em que se inicia a execução da linha 2 do algoritmo Heapsort, o vetor A esteja com o seguinte conteúdo: [9, 3, 8, 2, 0, 7]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 2ª iteração do for da linha 2 do Heapsort.
+
+
+A =
+1
+2
+3
+4
+5
+6
+
+
+{1:MCS:0~1~2~3~4~5~6~=7~8~9}
+{1:MCS:0~1~2~=3~4~5~6~7~8~9}
+{1:MCS:=0~1~2~3~4~5~6~7~8~9}
+{1:MCS:0~1~=2~3~4~5~6~7~8~9}
+{1:MCS:0~1~2~3~4~5~6~7~=8~9}
+{1:MCS:0~1~2~3~4~5~6~7~8~=9}
+
+
+
+Respostas:
+1. 7
+2. 3
+3. 0
+4. 2
+5. 8
+6. 9
+
+
+Questão: Suponha que o algoritmo HeapSort seja executado sobre um vetor A.Suponha que, no momento em que se inicia a execução da linha 2 do algoritmo Heapsort, o vetor A esteja com o seguinte conteúdo: [8,5,7,3,1,6]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 2ª iteração do for da linha 2 do Heapsort.
+
+
+A =
+1
+2
+3
+4
+5
+6
+
+
+{1:MCS:0~1~2~3~4~5~=6~7~8~9}
+{1:MCS:0~1~2~3~4~=5~6~7~8~9}
+{1:MCS:0~=1~2~3~4~5~6~7~8~9}
+{1:MCS:0~1~2~=3~4~5~6~7~8~9}
+{1:MCS:0~1~2~3~4~5~6~=7~8~9}
+{1:MCS:0~1~2~3~4~5~6~7~=8~9}
+
+
+
+Respostas:
+1. 6
+2. 5
+3. 1
+4. 3
+5. 7
+6. 8
+
+
+Questão: Suponha que o algoritmo HeapSort seja executado sobre um vetor A.Suponha que, no momento em que se inicia a execução da linha 2 do algoritmo Heapsort, o vetor A esteja com o seguinte conteúdo: [9, 5, 8, 4, 2, 7]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 2ª iteração do for da linha 2 do Heapsort.
+
+
+A =
+1
+2
+3
+4
+5
+6
+
+
+{1:MCS:0~1~2~3~4~5~6~=7~8~9}
+{1:MCS:0~1~2~3~4~=5~6~7~8~9}
+{1:MCS:0~1~=2~3~4~5~6~7~8~9}
+{1:MCS:0~1~2~3~=4~5~6~7~8~9}
+{1:MCS:0~1~2~3~4~5~6~7~=8~9}
+{1:MCS:0~1~2~3~4~5~6~7~8~=9}
+
+
+
+Respostas:
+1. 7
+2. 5
+3. 2
+4. 4
+5. 8
+6. 9
+
+
+Questão: Suponha que o algoritmo HeapSort seja executado sobre um vetor A.Suponha que, no momento em que se inicia a execução da linha 2 do algoritmo Heapsort, o vetor A esteja com o seguinte conteúdo: [7, 2, 5, 1, 0, 3]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 2ª iteração do for da linha 2 do Heapsort.
+
+
+A =
+1
+2
+3
+4
+5
+6
+
+
+{1:MCS:0~1~2~=3~4~5~6~7~8~9}
+{1:MCS:0~1~=2~3~4~5~6~7~8~9}
+{1:MCS:=0~1~2~3~4~5~6~7~8~9}
+{1:MCS:0~=1~2~3~4~5~6~7~8~9}
+{1:MCS:0~1~2~3~4~=5~6~7~8~9}
+{1:MCS:0~1~2~3~4~5~6~=7~8~9}
+
+
+
+Respostas:
+1. 3
+2. 2
+3. 0
+4. 1
+5. 5
+6. 7
+
+
+Questão: Suponha que o algoritmo HeapSort seja executado sobre um vetor A.Suponha que, no momento em que se inicia a execução da linha 2 do algoritmo Heapsort, o vetor A esteja com o seguinte conteúdo: [8, 4, 7, 3, 1, 5]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 2ª iteração do for da linha 2 do Heapsort.
+
+
+A =
+1
+2
+3
+4
+5
+6
+
+
+{1:MCS:0~1~2~3~4~=5~6~7~8~9}
+{1:MCS:0~1~2~3~=4~5~6~7~8~9}
+{1:MCS:0~=1~2~3~4~5~6~7~8~9}
+{1:MCS:0~1~2~=3~4~5~6~7~8~9}
+{1:MCS:0~1~2~3~4~5~6~=7~8~9}
+{1:MCS:0~1~2~3~4~5~6~7~=8~9}
+
+
+
+Respostas:
+1. 5
+2. 4
+3. 1
+4. 3
+5. 7
+6. 8
+
+
+Questão: Suponha que o algoritmo HeapSort seja executado sobre um vetor A.Suponha que, no momento em que se inicia a execução da linha 2 do algoritmo Heapsort, o vetor A esteja com o seguinte conteúdo: [6, 3, 5, 2, 0, 4]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 2ª iteração do for da linha 2 do Heapsort.
+
+
+A =
+1
+2
+3
+4
+5
+6
+
+
+{1:MCS:0~1~2~3~=4~5~6~7~8~9}
+{1:MCS:0~1~2~=3~4~5~6~7~8~9}
+{1:MCS:=0~1~2~3~4~5~6~7~8~9}
+{1:MCS:0~1~=2~3~4~5~6~7~8~9}
+{1:MCS:0~1~2~3~4~=5~6~7~8~9}
+{1:MCS:0~1~2~3~4~5~=6~7~8~9}
+
+
+
+Respostas:
+1. 4
+2. 3
+3. 0
+4. 2
+5. 5
+6. 6
+
+
+Questão: Suponha que o algoritmo HeapSort seja executado sobre um vetor A.Suponha que, no momento em que se inicia a execução da linha 2 do algoritmo Heapsort, o vetor A esteja com o seguinte conteúdo: [7, 3, 6, 2, 1, 5]. Assinale a alternativa que indica corretamente o conteúdo de A logo após a execução da 2ª iteração do for da linha 2 do Heapsort.
+
+
+A =
+1
+2
+3
+4
+5
+6
+
+
+{1:MCS:0~1~2~3~4~=5~6~7~8~9}
+{1:MCS:0~1~2~=3~4~5~6~7~8~9}
+{1:MCS:0~=1~2~3~4~5~6~7~8~9}
+{1:MCS:0~1~=2~3~4~5~6~7~8~9}
+{1:MCS:0~1~2~3~4~5~=6~7~8~9}
+{1:MCS:0~1~2~3~4~5~6~=7~8~9}
+
+
+
+Respostas:
+1. 5
+2. 3
+3. 1
+4. 2
+5. 6
+6. 7
+
+
+Questão: Assinale todas as alternativas CORRETAS.
+Respostas:
+
+
+Questão: Assinale todas as alternativas CORRETAS.
+Respostas:
+
+
+Questão: Assinale todas as alternativas CORRETAS.
+Respostas:
+
+
+Questão: Considere o algoritmo de busca em largura (BFS) visto em aula.Execute o algoritmo de busca em largura no grafo a seguir, a partir do vértice 1 e sempre que possível seguindo a ordem numérica.Informe os predecessores dos vértices após a execução do algoritmo:1: {1:MCS:=NIL~1~2~3~4~5~6~7~8}2: {1:MCS:NIL~=1~2~3~4~5~6~7~8}3: {1:MCS:NIL~1~=2~3~4~5~6~7~8}4: {1:MCS:NIL~1~2~3~4~5~6~7~=8}5: {1:MCS:NIL~=1~2~3~4~5~6~7~8}6: {1:MCS:NIL~=1~2~3~4~5~6~7~8}7: {1:MCS:NIL~1~2~=3~4~5~6~7~8}8: {1:MCS:NIL~1~2~=3~4~5~6~7~8}Qual é a altura da árvore de busca (lembre-se que a contagem começa do 0)? {1:MCS:0~1~2~3~=4~5~6~7~8}Em que nível da árvore de busca está o vértice 8? {1:MCS:0~1~2~=3~4~5~6~7~8}
+Respostas:
+1. NIL
+2. 1
+3. 2
+4. 8
+5. 1
+6. 1
+7. 3
+8. 3
+9. 4
+10. 3
+
+
+Questão: Considere o algoritmo de busca em largura (BFS) visto em aula.Execute o algoritmo de busca em largura no grafo a seguir, a partir do vértice 1 e sempre que possível seguindo a ordem numérica.Informe os predecessores dos vértices após a execução do algoritmo:1: {1:MCS:=NIL~1~2~3~4~5~6~7~8}2: {1:MCS:NIL~1~2~3~4~5~=6~7~8}3: {1:MCS:NIL~1~2~3~4~5~=6~7~8}4: {1:MCS:NIL~1~2~=3~4~5~6~7~8}5: {1:MCS:NIL~=1~2~3~4~5~6~7~8}6: {1:MCS:NIL~=1~2~3~4~5~6~7~8}7: {1:MCS:NIL~1~2~=3~4~5~6~7~8}8: {1:MCS:NIL~1~2~3~=4~5~6~7~8}Qual é a altura da árvore de busca (lembre-se que a contagem começa do 0)? {1:MCS:0~1~2~3~=4~5~6~7~8}Em que nível da árvore de busca está o vértice 8? {1:MCS:0~1~2~3~=4~5~6~7~8}
+Respostas:
+1. NIL
+2. 6
+3. 6
+4. 3
+5. 1
+6. 1
+7. 3
+8. 4
+9. 4
+10. 4
+
+
+Questão: Considere o algoritmo de busca em largura (BFS) visto em aula.Execute o algoritmo de busca em largura no grafo a seguir, a partir do vértice 1 e sempre que possível seguindo a ordem numérica.Informe os predecessores dos vértices após a execução do algoritmo:1: {1:MCS:=NIL~1~2~3~4~5~6~7~8}2: {1:MCS:NIL~1~2~3~4~5~=6~7~8}3: {1:MCS:NIL~1~=2~3~4~5~6~7~8}4: {1:MCS:NIL~1~2~3~4~5~6~=7~8}5: {1:MCS:NIL~=1~2~3~4~5~6~7~8}6: {1:MCS:NIL~=1~2~3~4~5~6~7~8}7: {1:MCS:NIL~1~=2~3~4~5~6~7~8}8: {1:MCS:NIL~1~2~3~4~5~6~=7~8}Qual é a altura da árvore de busca (lembre-se que a contagem começa do 0)? {1:MCS:0~1~2~3~=4~5~6~7~8}Em que nível da árvore de busca está o vértice 8? {1:MCS:0~1~2~3~=4~5~6~7~8}
+Respostas:
+1. NIL
+2. 6
+3. 2
+4. 7
+5. 1
+6. 1
+7. 2
+8. 7
+9. 4
+10. 4
+
+
+Questão: Considere o algoritmo de busca em largura (BFS) visto em aula.Execute o algoritmo de busca em largura no grafo a seguir, a partir do vértice 1 e sempre que possível seguindo a ordem numérica.Informe os predecessores dos vértices após a execução do algoritmo:1: {1:MCS:=NIL~1~2~3~4~5~6~7~8}2: {1:MCS:NIL~=1~2~3~4~5~6~7~8}3: {1:MCS:NIL~1~2~3~=4~5~6~7~8}4: {1:MCS:NIL~1~=2~3~4~5~6~7~8}5: {1:MCS:NIL~=1~2~3~4~5~6~7~8}6: {1:MCS:NIL~1~=2~3~4~5~6~7~8}7: {1:MCS:NIL~1~=2~3~4~5~6~7~8}8: {1:MCS:NIL~1~2~3~=4~5~6~7~8}Qual é a altura da árvore de busca (lembre-se que a contagem começa do 0)? {1:MCS:0~1~2~=3~4~5~6~7~8}Em que nível da árvore de busca está o vértice 8? {1:MCS:0~1~2~=3~4~5~6~7~8}
+Respostas:
+1. NIL
+2. 1
+3. 4
+4. 2
+5. 1
+6. 2
+7. 2
+8. 4
+9. 3
+10. 3
+
+
+Questão: Considere o algoritmo de busca em largura (BFS) visto em aula.Execute o algoritmo de busca em largura no grafo a seguir, a partir do vértice 1 e sempre que possível seguindo a ordem numérica.Informe os predecessores dos vértices após a execução do algoritmo:1: {1:MCS:=NIL~1~2~3~4~5~6~7~8}2: {1:MCS:NIL~=1~2~3~4~5~6~7~8}3: {1:MCS:NIL~=1~2~3~4~5~6~7~8}4: {1:MCS:NIL~1~2~=3~4~5~6~7~8}5: {1:MCS:NIL~=1~2~3~4~5~6~7~8}6: {1:MCS:NIL~1~=2~3~4~5~6~7~8}7: {1:MCS:NIL~1~=2~3~4~5~6~7~8}8: {1:MCS:NIL~1~2~3~4~5~=6~7~8}Qual é a altura da árvore de busca (lembre-se que a contagem começa do 0)? {1:MCS:0~1~2~=3~4~5~6~7~8}Em que nível da árvore de busca está o vértice 8? {1:MCS:0~1~2~=3~4~5~6~7~8}
+Respostas:
+1. NIL
+2. 1
+3. 1
+4. 3
+5. 1
+6. 2
+7. 2
+8. 6
+9. 3
+10. 3
+
+
+Questão: Considere o algoritmo de busca em largura (BFS) visto em aula.Execute o algoritmo de busca em largura no grafo a seguir, a partir do vértice 1 e sempre que possível seguindo a ordem numérica.Informe os predecessores dos vértices após a execução do algoritmo:1: {1:MCS:=NIL~1~2~3~4~5~6~7~8}2: {1:MCS:NIL~=1~2~3~4~5~6~7~8}3: {1:MCS:NIL~=1~2~3~4~5~6~7~8}4: {1:MCS:NIL~1~2~=3~4~5~6~7~8}5: {1:MCS:NIL~=1~2~3~4~5~6~7~8}6: {1:MCS:NIL~1~=2~3~4~5~6~7~8}7: {1:MCS:NIL~1~=2~3~4~5~6~7~8}8: {1:MCS:NIL~1~2~3~4~=5~6~7~8}Qual é a altura da árvore de busca (lembre-se que a contagem começa do 0)? {1:MCS:0~1~=2~3~4~5~6~7~8}Em que nível da árvore de busca está o vértice 8? {1:MCS:0~1~=2~3~4~5~6~7~8}
+Respostas:
+1. NIL
+2. 1
+3. 1
+4. 3
+5. 1
+6. 2
+7. 2
+8. 5
+9. 2
+10. 2
+
+
+Questão: Considere o grafo G1=(V,E) e a definição de grafo bipartido. Considere ainda que, se não há partição, V = V1 $$\cup$$ V2 com V1 = $$\emptyset$$ e V2 = V :     Podemos afirmar que o grafo G1 {1:MULTICHOICE_S:~não é bipartido~%100%é bipartido} e que a partição do conjunto de vértices é dada por conjuntos V1 e V2 com cardinalidades iguais a  {1:MULTICHOICE_S:~0~9~8~7~%50%6~5~3~2~1~%100%4} e  {1:MULTICHOICE_S:~10~9~8~7~%50%4~5~3~2~1~%100%6}  (considere 0 $$\leq$$ |V1| $$\leq$$ |V2| $$\leq$$ |V|).
+Respostas:
+1. é bipartido
+2. 4
+3. 6
+
+
+Questão: Considere o grafo G2=(V,E) e a definição de grafo bipartido. Considere ainda que, se não há partição, V = V1 $$\cup$$ V2 com V1 = $$\emptyset$$ e V2 = V :     Podemos afirmar que o grafo G2 {1:MULTICHOICE_S:~não é bipartido~%100%é bipartido} e que a partição do conjunto de vértices é dada por conjuntos V1 e V2 com cardinalidades iguais a  {1:MULTICHOICE_S:~0~9~8~7~%50%6~5~3~2~1~%100%4} e  {1:MULTICHOICE_S:~10~9~8~7~%50%4~5~3~2~1~%100%6}  (considere 0 $$\leq$$ |V1| $$\leq$$ |V2| $$\leq$$ |V|).
+Respostas:
+1. é bipartido
+2. 4
+3. 6
+
+
+Questão: Considere o grafo G3=(V,E) e a definição de grafo bipartido. Considere ainda que, se não há partição, V = V1 $$\cup$$ V2 com V1 = $$\emptyset$$ e V2 = V :     Podemos afirmar que o grafo G3 {1:MULTICHOICE_S:~não é bipartido~%100%é bipartido} e que a partição do conjunto de vértices é dada por conjuntos V1 e V2 com cardinalidades iguais a  {1:MULTICHOICE_S:~0~9~8~7~%50%6~5~3~2~1~%100%4} e  {1:MULTICHOICE_S:~10~9~8~7~%50%4~5~3~2~1~%100%6}  (considere 0 $$\leq$$ |V1| $$\leq$$ |V2| $$\leq$$ |V|).
+Respostas:
+1. é bipartido
+2. 4
+3. 6
+
+
+Questão: Considere o grafo G4=(V,E) e a definição de grafo bipartido. Considere ainda que, se não há partição, V = V1 $$\cup$$ V2 com V1 = $$\emptyset$$ e V2 = V :     Podemos afirmar que o grafo G4 {1:MULTICHOICE_S:~%100%não é bipartido~%100%é bipartido} e que a partição do conjunto de vértices é dada por conjuntos V1 e V2 com cardinalidades iguais a  {1:MULTICHOICE_S:~%100%0~9~8~7~6~5~3~2~1~4} e  {1:MULTICHOICE_S:~%100%10~9~8~7~4~5~3~2~1~6}  (considere 0 $$\leq$$ |V1| $$\leq$$ |V2| $$\leq$$ |V|).
+Respostas:
+1. não é bipartido
+2. é bipartido
+3. 0
+4. 10
+
+
+Questão: Considere o grafo de Petersen, apresentado na figura abaixo:Assinale todas as alternativas corretas. Fique atento ao fato que assinalar uma alternativa incorreta anula uma alternativa correta e apenas as alternativas corretas entram no cálculo.
+Respostas:
+
+
+Questão: Considere o grafo de Petersen, apresentado na figura abaixo:Assinale todas as alternativas corretas. Fique atento ao fato que assinalar uma alternativa incorreta anula uma alternativa correta e apenas as alternativas corretas entram no cálculo.
+Respostas:
+
+
+Questão: Considere o grafo de Petersen, apresentado na figura abaixo:Assinale todas as alternativas corretas. Fique atento ao fato que assinalar uma alternativa incorreta anula uma alternativa correta e apenas as alternativas corretas entram no cálculo.
+Respostas:
+
+
+Questão: Considere o grafo de Petersen, apresentado na figura abaixo:Assinale todas as alternativas corretas. Fique atento ao fato que assinalar uma alternativa incorreta anula uma alternativa correta e apenas as alternativas corretas entram no cálculo.
+Respostas:
+
+
+Questão: Considere os grafos da figura abaixo:Assinale todas alternativas corretas. Observe que assinalar uma alternativa incorreta anula uma alternativa correta:
+Respostas:
+
+
+Questão: Considere os grafos da figura abaixo:Assinale todas alternativas corretas. Observe que assinalar uma alternativa incorreta anula uma alternativa correta:
+Respostas:
+
+
+Questão: Considere os grafos da figura abaixo:Assinale todas alternativas corretas. Observe que assinalar uma alternativa incorreta anula uma alternativa correta:
+Respostas:
+
+
+Questão: Considere o grafo não dirigido G, representado pela matriz de adjacência A:$$ \left[ \begin{array}{cccc} 0 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 0 & 1 \\ 1 & 1 & 1 & 1 \\ \end{array} \right] $$Complete as frases com valores numéricos correspondentes ou escolha o combo adequado:A soma dos graus dos vértices de G é {1:NUMERICAL:~%100%16:0}.G possui {1:NUMERICAL:~%100%2:0} laço(s).G possui {1:NUMERICAL:~%100%2:0} vértice(s) de grau 5.G possui {1:NUMERICAL:~%100%4:0} vértice(s) e {1:NUMERICAL:~%100%8:0} aresta(s).G {1:MULTICHOICE_S:~é regular~%100%não é regular}.
+Respostas:
+1. array
+2. cccc
+3. array
+4. não é regular
+
+
+Questão: Considere o grafo dirigido G, representado pela matriz de adjacência A:$$ \left[ \begin{array}{cccc} 0 & 1 & 1 & 0 \\ 1 & 0 & 0 & 1 \\ 1 & 1 & 0 & 1 \\ 0 & 1 & 1 & 1 \\ \end{array} \right] $$Complete as frases com valores numéricos correspondentes ou escolha o combo adequado:A soma dos graus dos vértices de G é {1:NUMERICAL:~%100%20:0}.G possui {1:NUMERICAL:~%100%1:0} laço(s).G possui {1:NUMERICAL:~%100%2:0} vértice(s) de grau 5.G possui {1:NUMERICAL:~%100%4:0} vértice(s) e {1:NUMERICAL:~%100%10:0} aresta(s).G {1:MULTICHOICE_S:~é regular~%100%não é regular}.
+Respostas:
+1. array
+2. cccc
+3. array
+4. não é regular
+
+
+Questão: Considere o grafo dirigido G, representado pela matriz de adjacência A:$$ \left[ \begin{array}{cccc} 1 & 0 & 1 & 0 \\ 1 & 0 & 0 & 1 \\ 0 & 1 & 0 & 0 \\ 0 & 1 & 1 & 1 \\ \end{array} \right] $$Complete as frases com valores numéricos correspondentes ou escolha o combo adequado:A soma dos graus dos vértices de G é {1:NUMERICAL:~%100%16:0}.G possui {1:NUMERICAL:~%100%2:0} laço(s).G possui {1:NUMERICAL:~%100%1:0} vértice(s) de grau 5.G possui {1:NUMERICAL:~%100%4:0} vértice(s) e {1:NUMERICAL:~%100%8:0} aresta(s).G {1:MULTICHOICE_S:~é regular~%100%não é regular}.
+Respostas:
+1. array
+2. cccc
+3. array
+4. não é regular
+
+
+Questão: Considere o grafo não dirigido G, representado pela matriz de adjacência A:$$ \left[ \begin{array}{cccc} 0 & 1 & 0 & 0 \\ 1 & 1 & 1 & 1 \\0 & 1 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ \end{array} \right] $$Complete as frases com valores numéricos correspondentes ou escolha o combo adequado:A soma dos graus dos vértices de G é {1:NUMERICAL:~%100%10:0}.G possui {1:NUMERICAL:~%100%2:0} laço(s).G possui {1:NUMERICAL:~%100%1:0} vértice(s) de grau 5.G possui {1:NUMERICAL:~%100%4:0} vértices e {1:NUMERICAL:~%100%5:0} arestas.G {1:MULTICHOICE_S:~é regular~%100%não é regular}.
+Respostas:
+1. array
+2. cccc
+3. array
+4. não é regular
+
+
+Questão: Preencha o algoritmo Insere que insere o nó passado como parâmetro em uma ABB com a raiz informada, mantendo a propriedade da ABB, e retorna a raiz da ABB. Caso o valor do nó já esteja na árvore, o algoritmo não insere o nó.
+Insere(raiz, no)
+    if raiz == NIL
+        return no
+    
+    pai = raiz
+    encontrou = FALSE
+    while not encontrou
+        if no.chave == pai.chave
+            // já está na árvore
+            encontrou = TRUE
+        else if no.chave > pai.chave
+            if {1:MCS:=pai.filho-direita == NIL~pai.filho-direita != NIL~pai.filho-esquerda == NIL~pai.filho-esquerda != NIL~pai.filho-direita == no~pai.filho-esquerda == no}
+                pai.filho-direita = {1:MCS:=no~pai~raiz~pai.filho-direita~pai.filho-esquerda~no.chave}
+                encontrou = TRUE
+            else pai = {1:MCS:no~pai~raiz~=pai.filho-direita~pai.filho-esquerda~no.chave}
+        else
+            if {1:MCS:pai.filho-direita == NIL~pai.filho-direita != NIL~=pai.filho-esquerda == NIL~pai.filho-esquerda != NIL~pai.filho-direita == no~pai.filho-esquerda == no}
+                pai.filho-esquerda = {1:MCS:=no~pai~raiz~pai.filho-direita~pai.filho-esquerda~no.chave}
+                encontrou = TRUE
+            else pai = {1:MCS:no~pai~raiz~pai.filho-direita~=pai.filho-esquerda~no.chave}
+    return raiz
+
+
+Respostas:
+1. pai.filho-direita == NIL
+2.  NIL
+3. = NIL
+4.  NIL
+5. = no
+6. = no
+7. no
+8. pai.filho-direita
+9. = NIL
+10.  NIL
+11. pai.filho-esquerda == NIL
+12.  NIL
+13. = no
+14. = no
+15. no
+16. pai.filho-esquerda
+
+
+Questão: Preencha o algoritmo Insere que insere o nó passado como parâmetro em uma ABB com a raiz informada, mantendo a propriedade da ABB, e retorna a raiz da ABB. Caso o valor do nó já esteja na árvore, o algoritmo não insere o nó.
+Insere(raiz, no)    
+    if raiz == NIL
+        return no
+    
+    pai = raiz
+    while pai.chave != no.chave and pai.filho-direita != no and pai.filho-esquerda != no
+        if no.chave > pai.chave
+            if {1:MCS:=pai.filho-direita == NIL~=pai.filho-direita != NIL~pai.filho-esquerda == NIL~pai.filho-esquerda != NIL~pai.filho-direita == no~pai.filho-esquerda == no}
+                pai = {1:MCS:no~pai~raiz~=pai.filho-direita~pai.filho-esquerda~no.chave}
+            else pai.filho-direita = {1:MCS:=no~pai~raiz~pai.filho-direita~pai.filho-esquerda~no.chave}
+        else if no.chave < pai.chave
+            if {1:MCS:pai.filho-direita == NIL~pai.filho-direita != NIL~pai.filho-esquerda == NIL~=pai.filho-esquerda != NIL~pai.filho-direita == no~pai.filho-esquerda == no}
+                pai = {1:MCS:no~pai~raiz~pai.filho-direita~=pai.filho-esquerda~no.chave}
+            else pai.filho-esquerda = {1:MCS:=no~pai~raiz~pai.filho-direita~pai.filho-esquerda~no.chave}
+    return raiz
+
+Respostas:
+1. pai.filho-direita == NIL
+2. pai.filho-direita != NIL
+3. = NIL
+4.  NIL
+5. = no
+6. = no
+7. pai.filho-direita
+8. no
+9. = NIL
+10.  NIL
+11. = NIL
+12. pai.filho-esquerda != NIL
+13. = no
+14. = no
+15. pai.filho-esquerda
+16. no
+
+
+Questão: Considere os grafos A e B:O grafo A {1:MCS:é uma ABB~=não é uma ABB}.O grafo B {1:MCS:=é uma ABB~não é uma ABB}.
+Respostas:
+1. não é uma ABB
+2. é uma ABB
+
+
+Questão: Considere os grafos A e B:O grafo A {1:MCS:é uma ABB~=não é uma ABB}.O grafo B {1:MCS:=é uma ABB~não é uma ABB}.
+Respostas:
+1. não é uma ABB
+2. é uma ABB
+
+
+Questão: Considere os grafos A e B:O grafo A {1:MCS:=é uma ABB~não é uma ABB}.O grafo B {1:MCS:é uma ABB~=não é uma ABB}.
+Respostas:
+1. é uma ABB
+2. não é uma ABB
+
+
+Questão: Considere os grafos A e B:O grafo A {1:MCS:é uma ABB~=não é uma ABB}.O grafo B {1:MCS:=é uma ABB~não é uma ABB}.
+Respostas:
+1. não é uma ABB
+2. é uma ABB
+
+
+Questão: Considere os grafos A e B:O grafo A {1:MCS:é uma ABB~=não é uma ABB}.O grafo B {1:MCS:=é uma ABB~não é uma ABB}.
+Respostas:
+1. não é uma ABB
+2. é uma ABB
+
+
+Questão: Considere o algoritmo de busca em profundidade recursivo (DFS) visto em aula. Execute este algoritmo de busca em profundidade no grafo a seguir, a partir do vértice 1 e sempre que possível seguindo a ordem numérica. Pare exatamente no momento em que DFS-Visit está para ser chamada pela QUARTA VEZ (não esqueça de contar a primeira vez, quando é chamada pela DFS-Recursiva).Nesse ponto de parada, informe os predecessores dos seguintes vértices :Pred Vértice 1: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Pred Vértice 3: {1:MCS:NIL~1~=2~3~4~5~6~7~8}Pred Vértice 5: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Pred Vértice 6: {1:MCS:NIL~1~2~=3~4~5~6~7~8}Pred Vértice 8: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Nesse ponto de parada, informe as cores dos seguintes vértices :Cor Vértice 1: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 2: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 4: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Cor Vértice 7: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Cor Vértice 8: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Continue a executar o algoritmo até sua finalização. Qual será a altura da árvore de busca após  finalização do algoritmo (lembre-se que a contagem começa do 0)? {4:MCS:~0~1~2~3~4~=5~6~7~8}
+Respostas:
+1. NIL
+2. 2
+3. NIL
+4. 3
+5. NIL
+6. CINZA
+7. CINZA
+8. BRANCO
+9. BRANCO
+10. BRANCO
+11. 5
+
+
+Questão: Considere o algoritmo de busca em profundidade recursivo (DFS) visto em aula. Execute este algoritmo de busca em profundidade no grafo a seguir, a partir do vértice 5 e sempre que possível seguindo a ordem numérica. Pare exatamente no momento em que DFS-Visit está para ser chamada pela QUARTA VEZ (não esqueça de contar a primeira vez, quando é chamada pela DFS-Recursiva).Nesse ponto de parada, informe os predecessores dos seguintes vértices :Pred Vértice 1: {1:MCS:NIL~1~2~3~4~=5~6~7~8}Pred Vértice 2: {1:MCS:NIL~=1~2~3~4~5~6~7~8}Pred Vértice 3: {1:MCS:NIL~1~=2~3~4~5~6~7~8}Pred Vértice 6: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Pred Vértice 8: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Nesse ponto de parada, informe as cores dos seguintes vértices :Cor Vértice 1: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 2: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 3: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Cor Vértice 5: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 8: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Continue a executar o algoritmo até sua finalização. Qual será a altura da árvore de busca após  finalização do algoritmo (lembre-se que a contagem começa do 0)? {4:MCS:~0~1~2~3~4~5~=6~7~8}
+Respostas:
+1. 5
+2. 1
+3. 2
+4. NIL
+5. NIL
+6. CINZA
+7. CINZA
+8. BRANCO
+9. CINZA
+10. BRANCO
+11. 6
+
+
+Questão: Considere o algoritmo de busca em profundidade recursivo (DFS) visto em aula. Execute este algoritmo de busca em profundidade no grafo a seguir, a partir do vértice 7 e sempre que possível seguindo a ordem numérica. Pare exatamente no momento em que DFS-Visit está para ser chamada pela QUARTA VEZ (não esqueça de contar a primeira vez, quando é chamada pela DFS-Recursiva).Nesse ponto de parada, informe os predecessores dos seguintes vértices :Pred Vértice 1: {1:MCS:NIL~1~=2~3~4~5~6~7~8}Pred Vértice 2: {1:MCS:NIL~1~2~=3~4~5~6~7~8}Pred Vértice 3: {1:MCS:NIL~1~2~3~4~5~6~=7~8}Pred Vértice 7: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Pred Vértice 8: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Nesse ponto de parada, informe as cores dos seguintes vértices :Cor Vértice 2: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 3: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 5: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Cor Vértice 6: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Cor Vértice 7: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Continue a executar o algoritmo até sua finalização. Qual será a altura da árvore de busca após  finalização do algoritmo (lembre-se que a contagem começa do 0)? {4:MCS:~0~1~2~3~4~=5~6~7~8}
+Respostas:
+1. 2
+2. 3
+3. 7
+4. NIL
+5. NIL
+6. CINZA
+7. CINZA
+8. BRANCO
+9. BRANCO
+10. CINZA
+11. 5
+
+
+Questão: Considere o algoritmo de busca em profundidade recursivo (DFS) visto em aula. Execute este algoritmo de busca em profundidade no grafo a seguir, a partir do vértice 8 e sempre que possível seguindo a ordem numérica. Pare exatamente no momento em que DFS-Visit está para ser chamada pela QUARTA VEZ (não esqueça de contar a primeira vez, quando é chamada pela DFS-Recursiva).Nesse ponto de parada, informe os predecessores dos seguintes vértices :Pred Vértice 1: {1:MCS:NIL~1~2~=3~4~5~6~7~8}Pred Vértice 2: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Pred Vértice 3: {1:MCS:NIL~1~2~3~=4~5~6~7~8}Pred Vértice 7: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Pred Vértice 8: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Nesse ponto de parada, informe as cores dos seguintes vértices :Cor Vértice 2: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Cor Vértice 3: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 4: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 7: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Cor Vértice 8: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Continue a executar o algoritmo até sua finalização. Qual será a altura da árvore de busca após  finalização do algoritmo (lembre-se que a contagem começa do 0)? {4:MCS:~0~1~2~3~4~5~=6~7~8}
+Respostas:
+1. 3
+2. NIL
+3. 4
+4. NIL
+5. NIL
+6. BRANCO
+7. CINZA
+8. CINZA
+9. BRANCO
+10. CINZA
+11. 6
+
+
+Questão: Considere o algoritmo de busca em profundidade recursivo (DFS) visto em aula. Execute este algoritmo de busca em profundidade no grafo a seguir, a partir do vértice 5 e sempre que possível seguindo a ordem numérica. Pare exatamente no momento em que DFS-Visit está para ser chamada pela QUARTA VEZ (não esqueça de contar a primeira vez, quando é chamada pela DFS-Recursiva).Nesse ponto de parada, informe os predecessores dos seguintes vértices :Pred Vértice 1: {1:MCS:NIL~1~2~3~4~=5~6~7~8}Pred Vértice 2: {1:MCS:NIL~=1~2~3~4~5~6~7~8}Pred Vértice 3: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Pred Vértice 7: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Pred Vértice 8: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Nesse ponto de parada, informe as cores dos seguintes vértices :Cor Vértice 2: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 3: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Cor Vértice 4: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Cor Vértice 5: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 8: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Continue a executar o algoritmo até sua finalização. Qual será a altura da árvore de busca após  finalização do algoritmo (lembre-se que a contagem começa do 0)? {4:MCS:~0~1~2~3~4~=5~6~7~8}
+Respostas:
+1. 5
+2. 1
+3. NIL
+4. NIL
+5. NIL
+6. CINZA
+7. BRANCO
+8. BRANCO
+9. CINZA
+10. BRANCO
+11. 5
+
+
+Questão: Considere o algoritmo de busca em profundidade recursivo (DFS) visto em aula. Execute este algoritmo de busca em profundidade no grafo a seguir, a partir do vértice 4 e sempre que possível seguindo a ordem numérica. Pare exatamente no momento em que DFS-Visit está para ser chamada pela QUARTA VEZ (não esqueça de contar a primeira vez, quando é chamada pela DFS-Recursiva).Nesse ponto de parada, informe os predecessores dos seguintes vértices :Pred Vértice 1: {1:MCS:NIL~1~2~=3~4~5~6~7~8}Pred Vértice 2: {1:MCS:NIL~=1~2~3~4~5~6~7~8}Pred Vértice 3: {1:MCS:NIL~1~2~3~=4~5~6~7~8}Pred Vértice 7: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Pred Vértice 8: {1:MCS:=NIL~1~2~3~4~5~6~7~8}Nesse ponto de parada, informe as cores dos seguintes vértices :Cor Vértice 2: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Cor Vértice 3: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 4: {1:MCS:BRANCO~=CINZA~PRETO~NIL}Cor Vértice 5: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Cor Vértice 8: {1:MCS:=BRANCO~CINZA~PRETO~NIL}Continue a executar o algoritmo até sua finalização. Qual será a altura da árvore de busca após  finalização do algoritmo (lembre-se que a contagem começa do 0)? {4:MCS:~0~1~2~3~4~5~=6~7~8}
+Respostas:
+1. 3
+2. 1
+3. 4
+4. NIL
+5. NIL
+6. BRANCO
+7. CINZA
+8. CINZA
+9. BRANCO
+10. BRANCO
+11. 6
+
+
+Questão: Assinale a(s) alternativa(s) CORRETA(S). Para cada alternativa incorreta assinalada será descontada a pontuação de uma alternativa correta.
+Respostas:
+
+
+Questão: Assinale a(s) alternativa(s) CORRETA(S). Para cada alternativa incorreta assinalada será descontada a pontuação de uma alternativa correta.
+Respostas:
+
+
+Questão: Assinale a(s) alternativa(s) CORRETA(S). Para cada alternativa incorreta assinalada será descontada a pontuação de uma alternativa correta.
+Respostas:
+
+
+Questão: Assinale a(s) alternativa(s) CORRETA(S). Para cada alternativa incorreta assinalada será descontada a pontuação de uma alternativa correta.
+Respostas:
+
+
+Questão: Assinale a(s) alternativa(s) CORRETA(S). Para cada alternativa incorreta assinalada será descontada a pontuação de uma alternativa correta.
+Respostas:
+
+
+Questão: Assinale a(s) alternativa(s) CORRETA(S). Para cada alternativa incorreta assinalada será descontada a pontuação de uma alternativa correta.
+Respostas:
+
+
+Questão: Considere o grafo dirigido dado pela matriz de adjacência a seguir, com vértices indicados pelos números 1, 2, 3, 4, 5.
+Assinale as alternativas que correspondem a ordenações topológicas do grafo (cada alternativa errada anula uma alternativa certa):$$ \left[ \begin{array}{ccccc} 0 & 1 & 1 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0
+& 0 & 1 \\ 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0
+ \\ \end{array} \right] $$
+Respostas:
+1. array
+2. ccccc
+3. array
+
+
+Questão: Considere o grafo dirigido dado pela matriz de adjacência a seguir, com vértices indicados pelos números 1, 2, 3, 4, 5.
+Assinale as alternativas que correspondem a ordenações topológicas do grafo (cada alternativa errada anula uma alternativa certa):$$ \left[ \begin{array}{ccccc} 0 & 1 & 1 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0
+& 0 & 1 \\ 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0
+ \\ \end{array} \right] $$
+Respostas:
+1. array
+2. ccccc
+3. array
+
+
+Questão: Considere o grafo dirigido dado pela matriz de adjacência a seguir, com vértices indicados pelos números 1, 2, 3, 4, 5.
+Assinale as alternativas que correspondem a ordenações topológicas do grafo (cada alternativa errada anula uma alternativa certa):$$ \left[ \begin{array}{ccccc} 0 & 1 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0
+& 0 & 1 \\ 0 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0
+ \\ \end{array} \right] $$
+Respostas:
+1. array
+2. ccccc
+3. array
+
+
+Questão: Considere o grafo dirigido dado pela matriz de adjacência a seguir, com vértices indicados pelos números 1, 2, 3, 4, 5.
+Assinale as alternativas que correspondem a ordenações topológicas do grafo (cada alternativa errada anula uma alternativa certa):$$ \left[ \begin{array}{ccccc} 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1 \\ 0 & 1 & 0
+& 1 & 0 \\ 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0
+ \\ \end{array} \right] $$
+Respostas:
+1. array
+2. ccccc
+3. array
+
+
+Questão: Considere o grafo dirigido dado pela matriz de adjacência a seguir, com vértices indicados pelos números 1, 2, 3, 4, 5.
+Assinale as alternativas que correspondem a ordenações topológicas do grafo (cada alternativa errada anula uma alternativa certa):$$ \left[ \begin{array}{ccccc} 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 1 & 0 \\ 0 & 0 & 0
+& 1 & 0 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0
+ \\ \end{array} \right] $$
+Respostas:
+1. array
+2. ccccc
+3. array
+
+
+Questão: A seguir é apresentado um grafo em que os vértices representam filmes/séries do Netflix, com seus respectivos identificadores numéricos, e as arestas recomendações feitas pelo sistema. Para auxiliá-lo a decidir a ordem em que vai assistir aos filmes/séries recomendados, foi realizada uma ordenação topológica.     Execute o algoritmo Topological-Sort, considerando sempre que necessário a ordem numérica crescente, e indique a sequência de identificadores das séries/filmes resultante da ordenação topológica: [{1:MULTICHOICE_S:~1~2~4~5~6~%100%3}, {1:MULTICHOICE_S:~1~2~3~5~6~%100%4} , {1:MULTICHOICE_S:~1~2~4~3~6~%100%5}, {1:MULTICHOICE_S:~1~2~4~5~3~%100%6}, {1:MULTICHOICE_S:~1~3~4~5~6~%100%2}, {1:MULTICHOICE_S:~3~2~4~5~6~%100%1}]Indique o valor de u.fim, ao final da execução, para os vértices abaixo: Stranger Things: {1:NUMERICAL:~%100%12:0}The Walking Dead: {1:NUMERICAL:~%100%11:0}Van Helsing: {1:NUMERICAL:~%100%2:0}A quantidade de vértices tais que v.pred $$ \neq$$ NIL ao final da execução de DFS-Rec-comTempo é: {1:NUMERICAL:~%100%3:0}
+Respostas:
+1. 3
+2. 4
+3. 5
+4. 6
+5. 2
+6. 1
+
+
+Questão: A seguir é apresentado um grafo em que os vértices representam 
+filmes/séries do Netflix, com seus respectivos identificadores 
+numéricos, e as arestas recomendações feitas pelo sistema. Para 
+auxiliá-lo a decidir a ordem em que vai assistir aos filmes/séries 
+recomendados, foi realizada uma ordenação topológica.   Execute o algoritmo Topological-Sort, considerando sempre que necessário a ordem numérica crescente, e indique a sequência de identificadores das séries/filmes resultante da ordenação topológica: [{1:MULTICHOICE_S:~1~4~3~2~6~%100%5}, {1:MULTICHOICE_S:~1~4~3~2~%100%6~5}, {1:MULTICHOICE_S:~1~%100%4~3~2~6~5}, {1:MULTICHOICE_S:~1~4~%100%3~2~6~5}, {1:MULTICHOICE_S:~1~4~3~%100%2~6~5}, {1:MULTICHOICE_S:~%100%1~4~3~2~6~5}]Indique o valor de u.fim, ao final da execução, para os vértices abaixo: Stranger Things: {1:NUMERICAL:~%100%12:0}The Walking Dead: {1:NUMERICAL:~%100%11:0}Van Helsing: {1:NUMERICAL:~%100%2:0}A quantidade de vértices tais que v.pred $$ \neq$$ NIL ao final da execução de DFS-Rec-comTempo é: {1:NUMERICAL:~%100%1:0}
+Respostas:
+1. 5
+2. 6
+3. 4
+4. 3
+5. 2
+6. 1
+
+
+Questão: A seguir é apresentado um grafo em que os vértices representam 
+filmes/séries do Netflix, com seus respectivos identificadores 
+numéricos, e as arestas recomendações feitas pelo sistema. Para 
+auxiliá-lo a decidir a ordem em que vai assistir aos filmes/séries 
+recomendados, foi realizada uma ordenação topológica.   Execute o algoritmo Topological-Sort, considerando sempre que necessário a ordem numérica crescente, e indique a sequência de identificadores das séries/filmes resultante da ordenação topológica: [{1:MULTICHOICE_S:~1~4~6~2~5~%100%3}, {1:MULTICHOICE_S:~1~4~3~2~%100%5~6}, {1:MULTICHOICE_S:~1~%100%2~3~4~6~5}, {1:MULTICHOICE_S:~3~4~%100%1~2~6~5}, {1:MULTICHOICE_S:~1~2~3~%100%4~6~5}, {1:MULTICHOICE_S:~%100%6~4~3~2~1~5}]Indique o valor de u.fim, ao final da execução, para os vértices abaixo: Stranger Things: {1:NUMERICAL:~%100%12:0}The Walking Dead: {1:NUMERICAL:~%100%11:0}Van Helsing: {1:NUMERICAL:~%100%4:0}A quantidade de vértices tais que v.pred $$ \neq$$ NIL ao final da execução de DFS-Rec-comTempo é: {1:NUMERICAL:~%100%3:0}
+Respostas:
+1. 3
+2. 5
+3. 2
+4. 1
+5. 4
+6. 6
+
+
+Questão: A seguir é apresentado um grafo em que os vértices representam 
+filmes/séries do Netflix, com seus respectivos identificadores 
+numéricos, e as arestas recomendações feitas pelo sistema. Para 
+auxiliá-lo a decidir a ordem em que vai assistir aos filmes/séries 
+recomendados, foi realizada uma ordenação topológica.   Execute o algoritmo Topological-Sort, considerando sempre que necessário a ordem numérica crescente, e indique a sequência de identificadores das séries/filmes resultante da ordenação topológica: [{1:MULTICHOICE_S:~1~3~6~2~5~%100%4}, {1:MULTICHOICE_S:~1~4~3~2~%100%5~6}, {1:MULTICHOICE_S:~2~%100%1~3~4~6~5}, {1:MULTICHOICE_S:~3~4~%100%2~1~6~5}, {1:MULTICHOICE_S:~1~2~4~%100%3~6~5}, {1:MULTICHOICE_S:~%100%6~4~3~2~1~5}]Indique o valor de u.fim, ao final da execução, para os vértices abaixo: Stranger Things: {1:NUMERICAL:~%100%12:0}The Walking Dead: {1:NUMERICAL:~%100%11:0}Van Helsing: {1:NUMERICAL:~%100%5:0}A quantidade de vértices tais que v.pred $$ \neq$$ NIL ao final da execução de DFS-Rec-comTempo é: {1:NUMERICAL:~%100%4:0}
+Respostas:
+1. 4
+2. 5
+3. 1
+4. 2
+5. 3
+6. 6
+
+
+Questão: A seguir é apresentado um grafo em que os vértices representam 
+filmes/séries do Netflix, com seus respectivos identificadores 
+numéricos, e as arestas recomendações feitas pelo sistema. Para 
+auxiliá-lo a decidir a ordem em que vai assistir aos filmes/séries 
+recomendados, foi realizada uma ordenação topológica.   Execute o algoritmo Topological-Sort, considerando sempre que necessário a ordem numérica crescente, e indique a sequência de identificadores das séries/filmes resultante da ordenação topológica: [{1:MULTICHOICE_S:~1~3~6~2~5~%100%4}, {1:MULTICHOICE_S:~1~4~3~2~%100%5~6}, {1:MULTICHOICE_S:~2~%100%6~3~4~1~5}, {1:MULTICHOICE_S:~3~4~%100%1~2~6~5}, {1:MULTICHOICE_S:~1~3~4~%100%2~6~5}, {1:MULTICHOICE_S:~%100%3~4~6~2~1~5}]Indique o valor de u.fim, ao final da execução, para os vértices abaixo: Stranger Things: {1:NUMERICAL:~%100%12:0}The Walking Dead: {1:NUMERICAL:~%100%11:0}Van Helsing: {1:NUMERICAL:~%100%4:0}A quantidade de vértices tais que v.pred $$ \neq$$ NIL ao final da execução de DFS-Rec-comTempo é: {1:NUMERICAL:~%100%4:0}
+Respostas:
+1. 4
+2. 5
+3. 6
+4. 1
+5. 2
+6. 3
+
+
+Questão: Considere os algoritmos de Percurso em Árvores Binárias para responder as questões solicitadas:    
+Respostas:
+
+
+Questão: Considere o grafo G1 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G1 para o qual o percurso em pré ordem resulta na expressão aritmética *-bc/a+2d. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL.  1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 5: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/}; 8: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}.
+Respostas:
+1. *
+2. -
+3. /
+4. b
+5. c
+6. a
+7. +
+8. NIL
+9. NIL
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. 2
+15. d
+
+
+Questão: Considere o grafo G2 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G2 para o qual o percurso em pré ordem resulta na expressão aritmética -*bc+a/2d. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL.  1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 5: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/}; 8: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}.
+Respostas:
+1. -
+2. *
+3. +
+4. b
+5. c
+6. a
+7. /
+8. NIL
+9. NIL
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. 2
+15. d
+
+
+Questão: Considere o grafo G3 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G3 para o qual o percurso em pré ordem resulta na expressão aritmética +/bc-a*d2. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL.  1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 5: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/}; 8: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}.
+Respostas:
+1. +
+2. /
+3. -
+4. b
+5. c
+6. a
+7. *
+8. NIL
+9. NIL
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. d
+15. 2
+
+
+Questão: Considere o grafo G4 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G4 para o qual o percurso em pré ordem resulta na expressão aritmética -/bc*a+d2. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL.  1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 5: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/}; 8: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}.
+Respostas:
+1. -
+2. /
+3. *
+4. b
+5. c
+6. a
+7. +
+8. NIL
+9. NIL
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. d
+15. 2
+
+
+Questão: Considere o grafo G5 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G5 para o qual o percurso em pré ordem resulta na expressão aritmética +-bc*a/2d. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL.  1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 5: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/}; 8: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}.
+Respostas:
+1. +
+2. -
+3. *
+4. b
+5. c
+6. a
+7. /
+8. NIL
+9. NIL
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. 2
+15. d
+
+
+Questão: Considere o grafo G1 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G1 para o qual o percurso em pós ordem resulta na expressão aritmética cb-2*ad+/. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL.  1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/}; 5: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}; 8: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}.
+Respostas:
+1. /
+2. *
+3. +
+4. -
+5. 2
+6. a
+7. d
+8. c
+9. b
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. NIL
+15. NIL
+
+
+Questão: Considere o grafo G2 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G2 para o qual o percurso em pós ordem resulta na expressão aritmética cb*2-ad/+. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL.  1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/}; 5: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}; 8: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}.
+Respostas:
+1. +
+2. -
+3. /
+4. *
+5. 2
+6. a
+7. d
+8. c
+9. b
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. NIL
+15. NIL
+
+
+Questão: Considere o grafo G3 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G3 para o qual o percurso em pós ordem resulta na expressão aritmética cb/2+ad*-. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL. 1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/}; 5: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}; 8: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}.
+Respostas:
+1. -
+2. +
+3. *
+4. /
+5. 2
+6. a
+7. d
+8. c
+9. b
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. NIL
+15. NIL
+
+
+Questão: Considere o grafo G4 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G4 para o qual o percurso em pós ordem resulta na expressão aritmética cb/2-ad+*. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL. 1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/}; 5: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}; 8: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}.
+Respostas:
+1. *
+2. -
+3. +
+4. /
+5. 2
+6. a
+7. d
+8. c
+9. b
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. NIL
+15. NIL
+
+
+Questão: Considere o grafo G5 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G5 para o qual o percurso em pós ordem resulta na expressão aritmética cb-2*ad+/. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL.  1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/}; 5: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}; 8: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}.
+Respostas:
+1. /
+2. *
+3. +
+4. -
+5. 2
+6. a
+7. d
+8. c
+9. b
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. NIL
+15. NIL
+
+
+Questão: Considere o grafo G1 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G1 para o qual o percurso em ordem simétrica resulta na expressão aritmética a+d/2*b-c. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL.  Para evitar ambiguidade, a expressão pode ser reescrita com parênteses da seguinte maneira: (a+d)/(2*(b-c))1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 5: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/}; 8: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}.
+Respostas:
+1. /
+2. +
+3. *
+4. a
+5. d
+6. 2
+7. -
+8. NIL
+9. NIL
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. b
+15. c
+
+
+Questão: Considere o grafo G2 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G2 para o qual o percurso em ordem simétrica resulta na expressão aritmética a/d+2-b*c. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL.  Para evitar ambiguidade, a expressão pode ser reescrita com parênteses da seguinte maneira: (a/d)+(2-(b*c))1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 5: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/}; 8: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}.
+Respostas:
+1. +
+2. /
+3. -
+4. a
+5. d
+6. 2
+7. *
+8. NIL
+9. NIL
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. b
+15. c
+
+
+Questão: Considere o grafo G3 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G3 para o qual o percurso em ordem simétrica resulta na expressão aritmética a*d-2+b/c. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL. Para evitar ambiguidade, a expressão pode ser reescrita com parênteses da seguinte maneira: (a*d)-(2+(b/c))1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 5: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/}; 8: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}.
+Respostas:
+1. -
+2. *
+3. +
+4. a
+5. d
+6. 2
+7. /
+8. NIL
+9. NIL
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. b
+15. c
+
+
+Questão: Considere o grafo G4 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G4 para o qual o percurso em ordem simétrica resulta na expressão aritmética a+d*2-b/c. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL.  Para evitar ambiguidade, a expressão pode ser reescrita com parênteses da seguinte maneira: (a+d)*(2-(b/c))1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 5: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/}; 8: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}.
+Respostas:
+1. *
+2. +
+3. -
+4. a
+5. d
+6. 2
+7. /
+8. NIL
+9. NIL
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. b
+15. c
+
+
+Questão: Considere o grafo G5 e a árvore binária cheia com 15 vértices sem preenchimento do conteúdo de seus vértices.   Indique abaixo qual seria o preenchimento dos vértices 1, 2, ..., 15 da árvore binária que representa um subgrafo de G5 para o qual o percurso em ordem simétrica resulta na expressão aritmética a/d*2+b-c. Numa expressão aritmética representada em árvore binária os operadores são vértices internos e os operandos são folhas. Vértices vazios devem ser preenchidos com NIL.  Para evitar ambiguidade, a expressão pode ser reescrita com parênteses da seguinte maneira: (a/d)*(2+(b-c))1: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~%100%*~/};  2: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~+~*~%100%/}; 3: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~-~%100%+~*~/}; 4: {1:MULTICHOICE_S:~NIL~2~d~c~b~%100%a~-~+~*~/}; 5: {1:MULTICHOICE_S:~NIL~2~%100%d~c~b~a~-~+~*~/}; 6: {1:MULTICHOICE_S:~NIL~%100%2~d~c~b~a~-~+~*~/}; 7: {1:MULTICHOICE_S:~NIL~2~d~c~b~a~%100%-~+~*~/}; 8: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 9: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 10: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 11: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 12: {1:MULTICHOICE_S:~%100%NIL~\2~d~c~b~a~-~+~*~/}; 13: {1:MULTICHOICE_S:~%100%NIL~2~d~c~b~a~-~+~*~/}; 14: {1:MULTICHOICE_S:~NIL~2~d~c~%100%b~a~-~+~*~/}; 15: {1:MULTICHOICE_S:~NIL~2~d~%100%c~b~a~-~+~*~/}.
+Respostas:
+1. *
+2. /
+3. +
+4. a
+5. d
+6. 2
+7. -
+8. NIL
+9. NIL
+10. NIL
+11. NIL
+12. NIL
+13. NIL
+14. b
+15. c
+
+
+Questão: Uma grande empresa deseja diminuir seus custos de transporte de produtos entre a sua sede e as demais fábricas. No mapa abaixo são apresentadas os locais que a empresa possui (de A a I) e o custo de transporte de carga entre cada local.
+Considerando que a sede da empresa é na cidade A, preencha a seguir o custo do caminho mínimo da sede até cada cidade (caminho) e o predecessor ao aplicar o algoritmo de Dijkstra. Siga a ordem alfabética quando possível.
+
+
+
+A:
+caminho {1:NUMERICAL:=00~99};
+predecessor {1:MCS:A~B~C~D~E~F~G~H~I~=NIL}
+
+
+B:
+caminho {1:NUMERICAL:=05~99};
+predecessor {1:MCS:=A~B~C~D~E~F~G~H~I~NIL}
+
+
+C:
+caminho {1:NUMERICAL:=06~99};
+predecessor {1:MCS:=A~B~C~D~E~F~G~H~I~NIL}
+
+
+D:
+caminho {1:NUMERICAL:=10~99};
+predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}
+
+
+E:
+caminho {1:NUMERICAL:=09~99};
+predecessor {1:MCS:A~B~C~D~E~=F~G~H~I~NIL}
+
+
+F:
+caminho {1:NUMERICAL:=08~99};
+predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}
+
+
+G:
+caminho {1:NUMERICAL:=11~99};
+predecessor {1:MCS:A~B~C~D~=E~F~G~H~I~NIL}
+
+
+H:
+caminho {1:NUMERICAL:=11~99};
+predecessor {1:MCS:A~B~C~D~E~=F~G~H~I~NIL}
+
+
+I:
+caminho {1:NUMERICAL:=16~99};
+predecessor {1:MCS:A~B~C~D~E~F~=G~H~I~NIL}
+
+
+Respostas:
+1. 00
+2. NIL
+3. 05
+4. A
+5. 06
+6. A
+7. 10
+8. C
+9. 09
+10. F
+11. 08
+12. C
+13. 11
+14. E
+15. 11
+16. F
+17. 16
+18. G
+
+
+Questão: Uma grande empresa deseja diminuir seus custos de transporte de produtos entre a sua sede e as demais fábricas. No mapa abaixo são apresentadas os locais que a empresa possui (de A a I) e o custo de transporte de carga entre cada local.
+Considerando que a sede da empresa é na cidade B, preencha a seguir o custo do caminho mínimo da sede até cada cidade (caminho) e o predecessor ao aplicar o algoritmo de Dijkstra. Siga a ordem alfabética quando possível.
+
+
+
+A:
+caminho {1:NUMERICAL:=5~99};predecessor {1:MCS:A~=B~C~D~E~F~G~H~I~NIL}B:
+caminho {1:NUMERICAL:=0~99};predecessor {1:MCS:A~B~C~D~E~F~G~H~I~=NIL}C:
+caminho {1:NUMERICAL:=3~99};predecessor {1:MCS:A~=B~C~D~E~F~G~H~I~NIL}D:
+caminho {1:NUMERICAL:=7~99};predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}E:
+caminho {1:NUMERICAL:=6~99};predecessor {1:MCS:A~B~C~D~E~=F~G~H~I~NIL}F:
+caminho {1:NUMERICAL:=5~99};predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}G:
+caminho {1:NUMERICAL:=8~99};predecessor {1:MCS:A~B~C~D~=E~F~G~H~I~NIL}H:
+caminho {1:NUMERICAL:=8~99};predecessor {1:MCS:A~B~C~D~E~=F~G~H~I~NIL}I:
+caminho {1:NUMERICAL:=13~99};predecessor {1:MCS:A~B~C~D~E~F~=G~H~I~NIL}
+
+
+Respostas:
+1. 5
+2. B
+3. 0
+4. NIL
+5. 3
+6. B
+7. 7
+8. C
+9. 6
+10. F
+11. 5
+12. C
+13. 8
+14. E
+15. 8
+16. F
+17. 13
+18. G
+
+
+Questão: Uma grande empresa deseja diminuir seus custos de transporte de produtos entre a sua sede e as demais fábricas. No mapa abaixo são apresentadas os locais que a empresa possui (de A a I) e o custo de transporte de carga entre cada local.
+Considerando que a sede da empresa é na cidade C, preencha a seguir o custo do caminho mínimo da sede até cada cidade (caminho) e o predecessor ao aplicar o algoritmo de Dijkstra. Siga a ordem alfabética quando possível.
+
+
+
+A:
+caminho {1:NUMERICAL:=6~99};
+predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}B:
+caminho {1:NUMERICAL:=3~99};predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}C:
+caminho {1:NUMERICAL:=0~99};predecessor {1:MCS:A~B~C~D~E~F~G~H~I~=NIL}D:
+caminho {1:NUMERICAL:=4~99};predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}E:
+caminho {1:NUMERICAL:=3~99};predecessor {1:MCS:A~B~C~D~E~=F~G~H~I~NIL}F:
+caminho {1:NUMERICAL:=2~99};predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}G:
+caminho {1:NUMERICAL:=5~99};predecessor {1:MCS:A~B~C~D~=E~F~G~H~I~NIL}H:
+caminho {1:NUMERICAL:=5~99};predecessor {1:MCS:A~B~C~D~E~=F~G~H~I~NIL}I:
+caminho {1:NUMERICAL:=10~99};predecessor {1:MCS:A~B~C~D~E~F~=G~H~I~NIL}
+
+
+Respostas:
+1. 6
+2. C
+3. 3
+4. C
+5. 0
+6. NIL
+7. 4
+8. C
+9. 3
+10. F
+11. 2
+12. C
+13. 5
+14. E
+15. 5
+16. F
+17. 10
+18. G
+
+
+Questão: Uma grande empresa deseja diminuir seus custos de transporte de produtos entre a sua sede e as demais fábricas. No mapa abaixo são apresentadas os locais que a empresa possui (de A a I) e o custo de transporte de carga entre cada local.
+Considerando que a sede da empresa é na cidade D, preencha a seguir o custo do caminho mínimo da sede até cada cidade (caminho) e o predecessor ao aplicar o algoritmo de Dijkstra. Siga a ordem alfabética quando possível.
+
+
+
+A:
+caminho {1:NUMERICAL:=10~99};predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}B:
+caminho {1:NUMERICAL:=7~99};predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}C:
+caminho {1:NUMERICAL:=4~99};predecessor {1:MCS:A~B~C~=D~E~F~G~H~I~NIL}D:
+caminho {1:NUMERICAL:=0~99};predecessor {1:MCS:A~B~C~D~E~F~G~H~I~=NIL}E:
+caminho {1:NUMERICAL:=6~99};predecessor {1:MCS:A~B~C~D~E~F~=G~H~I~NIL}F:
+caminho {1:NUMERICAL:=6~99};predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}G:
+caminho {1:NUMERICAL:=4~99};predecessor {1:MCS:A~B~C~=D~E~F~G~H~I~NIL}H:
+caminho {1:NUMERICAL:=9~99};predecessor {1:MCS:A~B~C~D~E~=F~G~H~I~NIL}I:
+caminho {1:NUMERICAL:=9~99};predecessor {1:MCS:A~B~C~D~E~F~=G~H~I~NIL}
+
+
+Respostas:
+1. 10
+2. C
+3. 7
+4. C
+5. 4
+6. D
+7. 0
+8. NIL
+9. 6
+10. G
+11. 6
+12. C
+13. 4
+14. D
+15. 9
+16. F
+17. 9
+18. G
+
+
+Questão: Uma grande empresa deseja diminuir seus custos de transporte de produtos entre a sua sede e as demais fábricas. No mapa abaixo são apresentadas os locais que a empresa possui (de A a I) e o custo de transporte de carga entre cada local.
+Considerando que a sede da empresa é na cidade G, preencha a seguir o custo do caminho mínimo da sede até cada cidade (caminho) e o predecessor ao aplicar o algoritmo de Dijkstra. Siga a ordem alfabética quando possível.
+
+
+
+A:
+caminho {1:NUMERICAL:=11~99};predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}B:
+caminho {1:NUMERICAL:=8~99};predecessor {1:MCS:A~B~=C~D~E~F~G~H~I~NIL}C:
+caminho {1:NUMERICAL:=5~99};predecessor {1:MCS:A~B~C~D~E~=F~G~H~I~NIL}D:
+caminho {1:NUMERICAL:=4~99};predecessor {1:MCS:A~B~C~D~E~F~=G~H~I~NIL}E:
+caminho {1:NUMERICAL:=2~99};predecessor {1:MCS:A~B~C~D~E~F~=G~H~I~NIL}F:
+caminho {1:NUMERICAL:=3~99};predecessor {1:MCS:A~B~C~D~=E~F~G~H~I~NIL}G:
+caminho {1:NUMERICAL:=0~99};predecessor {1:MCS:A~B~C~D~E~F~G~H~I~=NIL}H:
+caminho {1:NUMERICAL:=6~99};predecessor {1:MCS:A~B~C~D~=E~F~G~H~I~NIL}I:
+caminho {1:NUMERICAL:=5~99};predecessor {1:MCS:A~B~C~D~E~F~=G~H~I~NIL}
+
+
+Respostas:
+1. 11
+2. C
+3. 8
+4. C
+5. 5
+6. F
+7. 4
+8. G
+9. 2
+10. G
+11. 3
+12. E
+13. 0
+14. NIL
+15. 6
+16. E
+17. 5
+18. G
+
+
+Questão: Um projeto fictício de conexão de backbones da Internet entre 10 cidades da Grande São Paulo, usando diversas tecnologias, possui os custos de implantação indicados no mapa abaixo. A primeira etapa de implantação deve garantir que as 10 cidades fiquem conectadas sem redundância. Na segunda etapa serão construídos os demais backbones que garantirão uma rede mais confiável.   Uma forma de encontrar quais conexões devem ser implementadas na primeira fase é encontrar uma árvore geradora mínima.Partindo da cidade de São Paulo (cidade 1), aplique o algoritmo de Prim, preenchendo a seguir os valores da chave e do adjacente para cada vértice do grafo. Siga a ordem numérica quando necessário.
+
+
+
+1:
+chave {1:NUMERICAL:=00~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~10~=NIL}
+
+
+2:
+chave {1:NUMERICAL:=20~99};
+adjacente {1:MCS:1~2~3~4~=5~6~7~8~9~10~NIL}
+
+
+3:
+chave {1:NUMERICAL:=05~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~=10~NIL}
+
+
+4:
+chave {1:NUMERICAL:=25~99};
+adjacente {1:MCS:1~=2~3~4~5~6~7~8~9~10~NIL}
+
+
+5:
+chave {1:NUMERICAL:=18~99};
+adjacente {1:MCS:1~2~3~4~5~=6~7~8~9~10~NIL}
+
+
+6:
+chave {1:NUMERICAL:=27~99};
+adjacente {1:MCS:1~2~=3~4~5~6~7~8~9~10~NIL}
+
+
+7:
+chave {1:NUMERICAL:=15~99};
+adjacente {1:MCS:=1~2~3~4~5~6~7~8~9~10~NIL}
+
+
+8:
+chave {1:NUMERICAL:=22~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~=10~NIL}
+
+
+9:
+chave {1:NUMERICAL:=10~99};
+adjacente {1:MCS:=1~2~3~4~5~6~7~8~9~10~NIL}
+
+ 10:    chave {1:NUMERICAL:=03~99};    adjacente {1:MCS:1~2~3~4~5~6~=7~8~9~10~NIL}
+Respostas:
+1. 00
+2. NIL
+3. 20
+4. 5
+5. 05
+6. 10
+7. 25
+8. 2
+9. 18
+10. 6
+11. 27
+12. 3
+13. 15
+14. 1
+15. 22
+16. 10
+17. 10
+18. 1
+19. 03
+20. 7
+
+
+Questão: Um projeto fictício de conexão de backbones da Internet entre 10 cidades da Grande São Paulo, usando diversas tecnologias, possui os custos de implantação indicados no mapa abaixo. A primeira etapa de implantação deve garantir que as 10 cidades fiquem conectadas sem redundância. Na segunda etapa serão construídos os demais backbones que garantirão uma rede mais confiável.   Uma forma de encontrar quais conexões devem ser implementadas na primeira fase é encontrar uma árvore geradora mínima.Partindo da cidade de Arujá (cidade 2), aplique o algoritmo de Prim, preenchendo a seguir os valores da chave e do adjacente para cada vértice do grafo. Siga a ordem numérica quando necessário.
+
+
+
+1:
+chave {1:NUMERICAL:=15~99};
+adjacente {1:MCS:1~2~3~4~5~6~=7~8~9~10~NIL}
+
+
+2:
+chave {1:NUMERICAL:=00~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~10~=NIL}
+
+
+3:
+chave {1:NUMERICAL:=27~99};
+adjacente {1:MCS:1~2~3~4~5~=6~7~8~9~10~NIL}
+
+
+4:
+chave {1:NUMERICAL:=25~99};
+adjacente {1:MCS:1~=2~3~4~5~6~7~8~9~10~NIL}
+
+
+5:
+chave {1:NUMERICAL:=20~99};
+adjacente {1:MCS:1~=2~3~4~5~6~7~8~9~10~NIL}
+
+
+6:
+chave {1:NUMERICAL:=18~99};
+adjacente {1:MCS:1~2~3~4~=5~6~7~8~9~10~NIL}
+
+
+7:
+chave {1:NUMERICAL:=03~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~=10~NIL}
+
+
+8:
+chave {1:NUMERICAL:=22~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~=10~NIL}
+
+
+9:
+chave {1:NUMERICAL:=10~99};
+adjacente {1:MCS:=1~2~3~4~5~6~7~8~9~10~NIL}
+
+ 10:    chave {1:NUMERICAL:=05~99};    adjacente {1:MCS:1~2~=3~4~5~6~7~8~9~10~NIL}
+Respostas:
+1. 15
+2. 7
+3. 00
+4. NIL
+5. 27
+6. 6
+7. 25
+8. 2
+9. 20
+10. 2
+11. 18
+12. 5
+13. 03
+14. 10
+15. 22
+16. 10
+17. 10
+18. 1
+19. 05
+20. 3
+
+
+Questão: Um projeto fictício de conexão de backbones da Internet entre 10 cidades da Grande São Paulo, usando diversas tecnologias, possui os custos de implantação indicados no mapa abaixo. A primeira etapa de implantação deve garantir que as 10 cidades fiquem conectadas sem redundância. Na segunda etapa serão construídos os demais backbones que garantirão uma rede mais confiável.   Uma forma de encontrar quais conexões devem ser implementadas na primeira fase é encontrar uma árvore geradora mínima.Partindo da cidade de Barueri (cidade 3), aplique o algoritmo de Prim, preenchendo a seguir os valores da chave e do adjacente para cada vértice do grafo. Siga a ordem numérica quando necessário.
+
+
+
+1:
+chave {1:NUMERICAL:=15~99};
+adjacente {1:MCS:1~2~3~4~5~6~=7~8~9~10~NIL}
+
+
+2:
+chave {1:NUMERICAL:=20~99};
+adjacente {1:MCS:1~2~3~4~=5~6~7~8~9~10~NIL}
+
+
+3:
+chave {1:NUMERICAL:=00~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~10~=NIL}
+
+
+4:
+chave {1:NUMERICAL:=25~99};
+adjacente {1:MCS:1~=2~3~4~5~6~7~8~9~10~NIL}
+
+
+5:
+chave {1:NUMERICAL:=18~99};
+adjacente {1:MCS:1~2~3~4~5~=6~7~8~9~10~NIL}
+
+
+6:
+chave {1:NUMERICAL:=27~99};
+adjacente {1:MCS:1~2~=3~4~5~6~7~8~9~10~NIL}
+
+
+7:
+chave {1:NUMERICAL:=03~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~=10~NIL}
+
+
+8:
+chave {1:NUMERICAL:=22~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~=10~NIL}
+
+
+9:
+chave {1:NUMERICAL:=10~99};
+adjacente {1:MCS:=1~2~3~4~5~6~7~8~9~10~NIL}
+
+ 10:    chave {1:NUMERICAL:=05~99};    adjacente {1:MCS:1~2~=3~4~5~6~7~8~9~10~NIL}
+Respostas:
+1. 15
+2. 7
+3. 20
+4. 5
+5. 00
+6. NIL
+7. 25
+8. 2
+9. 18
+10. 6
+11. 27
+12. 3
+13. 03
+14. 10
+15. 22
+16. 10
+17. 10
+18. 1
+19. 05
+20. 3
+
+
+Questão: Um projeto fictício de conexão de backbones da Internet entre 10 cidades da Grande São Paulo, usando diversas tecnologias, possui os custos de implantação indicados no mapa abaixo. A primeira etapa de implantação deve garantir que as 10 cidades fiquem conectadas sem redundância. Na segunda etapa serão construídos os demais backbones que garantirão uma rede mais confiável.   Uma forma de encontrar quais conexões devem ser implementadas na primeira fase é encontrar uma árvore geradora mínima.Partindo da cidade de Biritiba-Mirim (cidade 4), aplique o algoritmo de Prim, preenchendo a seguir os valores da chave e do adjacente para cada vértice do grafo. Siga a ordem numérica quando necessário.
+
+
+
+1:
+chave {1:NUMERICAL:=15~99};
+adjacente {1:MCS:1~2~3~4~5~6~=7~8~9~10~NIL}
+
+
+2:
+chave {1:NUMERICAL:=25~99};
+adjacente {1:MCS:1~2~3~=4~5~6~7~8~9~10~NIL}
+
+
+3:
+chave {1:NUMERICAL:=27~99};
+adjacente {1:MCS:1~2~3~4~5~=6~7~8~9~10~NIL}
+
+
+4:
+chave {1:NUMERICAL:=00~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~10~=NIL}
+
+
+5:
+chave {1:NUMERICAL:=20~99};
+adjacente {1:MCS:1~=2~3~4~5~6~7~8~9~10~NIL}
+
+
+6:
+chave {1:NUMERICAL:=18~99};
+adjacente {1:MCS:1~2~3~4~=5~6~7~8~9~10~NIL}
+
+
+7:
+chave {1:NUMERICAL:=03~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~=10~NIL}
+
+
+8:
+chave {1:NUMERICAL:=22~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~=10~NIL}
+
+
+9:
+chave {1:NUMERICAL:=10~99};
+adjacente {1:MCS:=1~2~3~4~5~6~7~8~9~10~NIL}
+
+ 10:    chave {1:NUMERICAL:=05~99};    adjacente {1:MCS:1~2~=3~4~5~6~7~8~9~10~NIL}
+Respostas:
+1. 15
+2. 7
+3. 25
+4. 4
+5. 27
+6. 6
+7. 00
+8. NIL
+9. 20
+10. 2
+11. 18
+12. 5
+13. 03
+14. 10
+15. 22
+16. 10
+17. 10
+18. 1
+19. 05
+20. 3
+
+
+Questão: Um projeto fictício de conexão de backbones da Internet entre 10 cidades da Grande São Paulo, usando diversas tecnologias, possui os custos de implantação indicados no mapa abaixo. A primeira etapa de implantação deve garantir que as 10 cidades fiquem conectadas sem redundância. Na segunda etapa serão construídos os demais backbones que garantirão uma rede mais confiável.   Uma forma de encontrar quais conexões devem ser implementadas na primeira fase é encontrar uma árvore geradora mínima.Partindo da cidade de Caieiras (cidade 5), aplique o algoritmo de Prim, preenchendo a seguir os valores da chave e do adjacente para cada vértice do grafo. Siga a ordem numérica quando necessário.
+
+
+
+1:
+chave {1:NUMERICAL:=15~99};
+adjacente {1:MCS:1~2~3~4~5~6~=7~8~9~10~NIL}
+
+
+2:
+chave {1:NUMERICAL:=20~99};
+adjacente {1:MCS:1~2~3~4~=5~6~7~8~9~10~NIL}
+
+
+3:
+chave {1:NUMERICAL:=27~99};
+adjacente {1:MCS:1~2~3~4~5~=6~7~8~9~10~NIL}
+
+
+4:
+chave {1:NUMERICAL:=25~99};
+adjacente {1:MCS:1~=2~3~4~5~6~7~8~9~10~NIL}
+
+
+5:
+chave {1:NUMERICAL:=00~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~10~=NIL}
+
+
+6:
+chave {1:NUMERICAL:=18~99};
+adjacente {1:MCS:1~2~3~4~=5~6~7~8~9~10~NIL}
+
+
+7:
+chave {1:NUMERICAL:=03~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~=10~NIL}
+
+
+8:
+chave {1:NUMERICAL:=22~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~=10~NIL}
+
+
+9:
+chave {1:NUMERICAL:=10~99};
+adjacente {1:MCS:=1~2~3~4~5~6~7~8~9~10~NIL}
+
+ 10:    chave {1:NUMERICAL:=05~99};    adjacente {1:MCS:1~2~=3~4~5~6~7~8~9~10~NIL}
+Respostas:
+1. 15
+2. 7
+3. 20
+4. 5
+5. 27
+6. 6
+7. 25
+8. 2
+9. 00
+10. NIL
+11. 18
+12. 5
+13. 03
+14. 10
+15. 22
+16. 10
+17. 10
+18. 1
+19. 05
+20. 3
+
+
+Questão: Um projeto fictício de conexão de backbones da Internet entre 10 cidades da Grande São Paulo, usando diversas tecnologias, possui os custos de implantação indicados no mapa abaixo. A primeira etapa de implantação deve garantir que as 10 cidades fiquem conectadas sem redundância. Na segunda etapa serão construídos os demais backbones que garantirão uma rede mais confiável.   Uma forma de encontrar quais conexões devem ser implementadas na primeira fase é encontrar uma árvore geradora mínima.Partindo da cidade de Carapicuiba (cidade 6), aplique o algoritmo de Prim, preenchendo a seguir os valores da chave e do adjacente para cada vértice do grafo. Siga a ordem numérica quando necessário. EDITADO: devido à inconsistência no enunciado (Carapicuiba é cidade 7 e não 6) serão aceitas como corretas tanto as respostas que consideraram partida da cidade 6 quanto da cidade 7. 
+
+
+
+1:
+chave {1:NUMERICAL:=15~99};
+adjacente {1:MCS:1~2~3~4~5~6~=7~8~9~10~NIL}
+
+
+2:
+chave {1:NUMERICAL:=20~99};
+adjacente {1:MCS:1~2~3~4~=5~6~7~8~9~10~NIL}
+
+
+3:
+chave {1:NUMERICAL:=5~=27~99};
+adjacente {1:MCS:1~2~3~4~5~=6~7~8~9~=10~NIL}
+
+
+4:
+chave {1:NUMERICAL:=25~99};
+adjacente {1:MCS:1~=2~3~4~5~6~7~8~9~10~NIL}
+
+
+5:
+chave {1:NUMERICAL:=18~99};
+adjacente {1:MCS:1~2~=3~4~5~=6~7~8~9~10~NIL}
+
+
+6:
+chave {1:NUMERICAL:=00~=27~99};
+adjacente {1:MCS:1~2~=3~4~5~6~7~8~9~10~=NIL}
+
+
+7:
+chave {1:NUMERICAL:=00~=03~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~=10~=NIL}
+
+
+8:
+chave {1:NUMERICAL:=22~99};
+adjacente {1:MCS:1~2~3~4~5~6~7~8~9~=10~NIL}
+
+
+9:
+chave {1:NUMERICAL:=10~99};
+adjacente {1:MCS:=1~2~3~4~5~6~7~8~9~10~NIL}
+
+ 10:    chave {1:NUMERICAL:=03~=05~99};    adjacente {1:MCS:1~2~=3~4~5~6~=7~8~9~10~NIL}
+Respostas:
+1. 15
+2. 7
+3. 20
+4. 5
+5. 5
+6. 27
+7. 6
+8. 10
+9. 25
+10. 2
+11. 18
+12. 3
+13. 6
+14. 00
+15. 27
+16. 3
+17. NIL
+18. 00
+19. 03
+20. 10
+21. NIL
+22. 22
+23. 10
+24. 10
+25. 1
+26. 03
+27. 05
+28. 3
+29. 7
+
+
+Questão: Suponha a seguinte tabela de codificação de Huffman  (código de tamanho variável) para os caracteres da língua inglesa , gerada de acordo com as frequências de ocorrência previstas para uma determinada aplicação. Ao lado de cada código de Huffman a tabela apresenta também o código ASCII (código de tamanho fixo, de 8 bits nesse caso).De acordo com essa tabela: 1. a codificação para a palavra TEA é  {1:SHORTANSWER_C:=1111000001}2. o caracter A deve ser usado com {1:MCS:=menor~igual~maior} frequência que o caracter E na aplicação para a qual o código de Huffman desta tabela foi criado3. o código 101000001000001111011 representa a palavra {1:SHORTANSWER_C:=POLY} (Atenção: coloque a palavra em letras MAIÚSCULAS e SEM ESPAÇOS NEM CARACTERES ESPECIAIS)4. na aplicação para a qual esse código HUFFMAN foi criado, um texto assim codificado ocuparia {1:MCS:=menos~mais~o mesmo} espaço de memória que se codificado em ASCII5. podemos substituir o código do caracter L  por   000010  mantendo a mesma eficiência e funcionamento do código ? {1:MCS:=SIM~NÃO}6. podemos substituir o código do caracter Z  por   1101001010  mantendo a mesma eficiência  e funcionamento do código ? {1:MCS:SIM~=NÃO}
+Respostas:
+1. 1111000001
+2. menor
+3. POLY
+4. menos
+5. SIM
+6. NÃO
+
+
+Questão: Suponha a seguinte tabela de codificação de Huffman  (código de tamanho variável) para os caracteres da língua inglesa , gerada de acordo com as frequências de ocorrência previstas para uma determinada aplicação. Ao lado de cada código de Huffman a tabela apresenta também o código ASCII (código de tamanho fixo, de 8 bits nesse caso).De acordo com essa tabela: 1. a codificação para a palavra EAT é  {1:SHORTANSWER_C:=1000001111}2. o caracter H deve ser usado com {1:MCS:=menor~igual~maior} frequência que o caracter T na aplicação para a qual o código de Huffman desta tabela foi criado3. o código 001110111100 representa a palavra {1:SHORTANSWER_C:=USE} (Atenção: coloque a palavra em letras MAIÚSCULAS e SEM ESPAÇOS NEM CARACTERES ESPECIAIS)4. na aplicação para a qual esse código HUFFMAN foi criado, um texto assim codificado ocuparia {1:MCS:=menos~mais~o mesmo} espaço de memória que se codificado em ASCII5. podemos substituir o código do caracter K  por   1101001  mantendo a mesma eficiência e funcionamento do código ? {1:MCS:SIM~=NÃO}6. podemos substituir o código do caracter Y  por   11010  mantendo a mesma eficiência  e funcionamento do código ? {1:MCS:SIM~=NÃO}
+Respostas:
+1. 1000001111
+2. menor
+3. USE
+4. menos
+5. NÃO
+6. NÃO
+
+
+Questão: Suponha a seguinte tabela de codificação de Huffman  (código de tamanho variável) para os caracteres da língua inglesa , gerada de acordo com as frequências de ocorrência previstas para uma determinada aplicação. Ao lado de cada código de Huffman a tabela apresenta também o código ASCII (código de tamanho fixo, de 8 bits nesse caso).De acordo com essa tabela: 1. a codificação para a palavra NOT é  {1:SHORTANSWER_C:=01100010111}2. o caracter I deve ser usado com {1:MCS:=menor~igual~maior} frequência que o caracter E na aplicação para a qual o código de Huffman desta tabela foi criado3. o código 101000110010110 representa a palavra {1:SHORTANSWER_C:=PCN} (Atenção: coloque a palavra em letras MAIÚSCULAS e SEM ESPAÇOS NEM CARACTERES ESPECIAIS)4. na aplicação para a qual esse código HUFFMAN foi criado, um texto assim codificado ocuparia {1:MCS:=menos~mais~o mesmo} espaço de memória que se codificado em ASCII5. podemos substituir o código do caracter W  por   110011  mantendo a mesma eficiência e funcionamento do código ? {1:MCS:SIM~=NÃO}6. podemos substituir o código do caracter S  por   0011  mantendo a mesma eficiência  e funcionamento do código ? {1:MCS:SIM~=NÃO}
+Respostas:
+1. 01100010111
+2. menor
+3. PCN
+4. menos
+5. NÃO
+6. NÃO
+
+
+Questão: Suponha as seguintes frequências de ocorrência, em uma determinada aplicação, para os caracteres que podem nela vir a ser utilizados.Aplique o algoritmo de Huffman abaixo e complete as questões. 1. a altura da árvore de Huffman é  {1:NUMERICAL:=03~99}2. o caracter V será codificado com {1:NUMERICAL:=02~99} bit(s)3. o caracter Y será codificado com {1:NUMERICAL:=03~99} bit(s)4. o código de menor tamanho possui {1:NUMERICAL:=02~99} bit(s)5. supondo-se que as arestas dos filhos da esquerda sejam consideradas como bit 1 e as dos filhos da direita como bit 0:   VYZ seria codificado como {1:SHORTANSWER_C:=00100101} (SEM ESPAÇOS) e o código 1101101 representaria {1:SHORTANSWER_C:=XWZ} (MAIÚSCULAS, SEM ESPAÇOS)  
+Respostas:
+1. 03
+2. 02
+3. 03
+4. 02
+5. 00100101
+6. XWZ
+
+
+Questão: Suponha as seguintes frequências de ocorrência, em uma determinada aplicação, para os caracteres que podem nela vir a ser utilizados.Aplique o algoritmo de Huffman abaixo e complete as questões. 1. a altura da árvore de Huffman é  {1:NUMERICAL:=03~99}2. o caracter D será codificado com {1:NUMERICAL:=03~99} bit(s)3. o caracter C será codificado com {1:NUMERICAL:=02~99} bit(s)4. o código de menor tamanho possui {1:NUMERICAL:=02~99} bit(s)5. supondo-se que as arestas dos filhos da esquerda sejam consideradas como bit 1 e as dos filhos da direita como bit 0:   ABD seria codificado como {1:SHORTANSWER_C:=0001100} (SEM ESPAÇOS) e o código 0111101 representa {1:SHORTANSWER_C:=BCE} (MAIÚSCULAS, SEM ESPAÇOS) 
+Respostas:
+1. 03
+2. 03
+3. 02
+4. 02
+5. 0001100
+6. BCE
+
+
+Questão: Suponha as seguintes frequências de ocorrência, em uma determinada aplicação, para os caracteres que podem nela vir a ser utilizados.Aplique o algoritmo de Huffman abaixo e complete as questões. 1. a altura da árvore de Huffman é  {1:NUMERICAL:=03~99}2. o caracter P será codificado com {1:NUMERICAL:=02~99} bit(s)3. o caracter Q será codificado com {1:NUMERICAL:=03~99} bit(s)4. o código de menor tamanho possui {1:NUMERICAL:=02~99} bit(s)5. supondo-se que as arestas dos filhos da esquerda sejam consideradas como bit 1 e as dos filhos da direita como bit 0:   NQR seria codificado como {1:SHORTANSWER_C:=01100101} (SEM ESPAÇOS) e o código 0111101 representaria {1:SHORTANSWER_C:=MPR} (MAIÚSCULAS, SEM ESPAÇOS)   
+Respostas:
+1. 03
+2. 02
+3. 03
+4. 02
+5. 01100101
+6. MPR
+
+
+Questão: Suponha as seguintes frequências de ocorrência, em uma determinada aplicação, para os caracteres que podem nela vir a ser utilizados.Aplique o algoritmo de Huffman abaixo e complete as questões. 1. a altura da árvore de Huffman é  {1:NUMERICAL:=03~99}2. o caracter H será codificado com {1:NUMERICAL:=02~99} bit(s)3. o caracter I será codificado com {1:NUMERICAL:=03~99} bit(s)4. o código de menor tamanho possui {1:NUMERICAL:=02~99} bit(s)5. supondo-se que as arestas dos filhos da esquerda sejam consideradas como bit 1 e as dos filhos da direita como bit 0:   GHI seria codificado como {1:SHORTANSWER_C:=0111100} (SEM ESPAÇOS) e o código 11100101 representaria {1:SHORTANSWER_C:=HIJ} (MAIÚSCULAS, SEM ESPAÇOS) 
+Respostas:
+1. 03
+2. 02
+3. 03
+4. 02
+5. 0111100
+6. HIJ
+
+
+Questão: Suponha as seguintes frequências de ocorrência, em uma determinada aplicação, para os caracteres que podem nela vir a ser utilizados.Aplique o algoritmo de Huffman abaixo e complete as questões. 1. a altura da árvore de Huffman é  {1:NUMERICAL:=03~99}2. o caracter P será codificado com {1:NUMERICAL:=03~99} bit(s)3. o caracter M será codificado com {1:NUMERICAL:=02~99} bit(s)4. o código de menor tamanho possui {1:NUMERICAL:=02~99} bit(s)5. supondo-se que as arestas dos filhos da esquerda sejam consideradas como bit 1 e as dos filhos da direita como bit 0:   PNM seria codificado como {1:SHORTANSWER_C:=10110011} (SEM ESPAÇOS) e o código 1011101 representaria {1:SHORTANSWER_C:=PML} (MAIÚSCULAS, SEM ESPAÇOS)   
+Respostas:
+1. 03
+2. 03
+3. 02
+4. 02
+5. 10110011
+6. PML
+
+

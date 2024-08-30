@@ -1,0 +1,71 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>fc1da6a5-4416-46e2-8874-3cd5f661875a</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>BaseDeConhecimento.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>BaseDeConhecimento</Name>
+    <RootNamespace>BaseDeConhecimento</RootNamespace>
+    <InterpreterId>MSBuild|envBaseDeConhecimento|$(MSBuildProjectFullPath)</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>--workers 8</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ApiRepository.py" />
+    <Compile Include="BaseDeConhecimento.py" />
+    <Compile Include="Enums.py" />
+    <Compile Include="FileHandler.py" />
+    <Compile Include="KnowledgeBaseLocal.py" />
+    <Compile Include="KnowledgeBase.py" />
+    <Compile Include="KnowledgeGraphLocal.py" />
+    <Compile Include="KnowledgeGraph.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Leitura.py" />
+    <Compile Include="main.py" />
+    <Compile Include="Models.py" />
+    <Compile Include="MoodleWebhookCaller.py" />
+    <Compile Include="MultipleQuestionModel.py" />
+    <Compile Include="WikipediaCrawler.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="envBaseDeConhecimento\">
+      <Id>envBaseDeConhecimento</Id>
+      <Version>3.10</Version>
+      <Description>envBaseDeConhecimento (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

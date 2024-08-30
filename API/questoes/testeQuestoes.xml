@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Default for PCS3100</text>
+    </category>
+    <info format="moodle_auto_format">
+      <text>The default category for questions shared in context 'PCS3100'.</text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 2  -->
+  <question type="multichoice">
+    <name>
+      <text>Nome da questão 1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Esse é um teste de múltipla escolha. A alternativa correta é a alternativa: C?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Esse é o general feedback</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text><![CDATA[<p>Your answer is correct.</p>]]></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text><![CDATA[<p>Your answer is partially correct.</p>]]></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text><![CDATA[<p>Your answer is incorrect.</p>]]></text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Alternativa A</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Feedback da alternativa A</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Alternativa B</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Feedback da alternativa B</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Alternativa C</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Feedback da alternativa C</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3  -->
+  <question type="multichoice">
+    <name>
+      <text>Questão de múltipla escolha 2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Essa é a questão de múltipla escolha 2</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Essa questão é um teste e esse é o feedback.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text><![CDATA[<p>Your answer is correct.</p>]]></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text><![CDATA[<p>Your answer is partially correct.</p>]]></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text><![CDATA[<p>Your answer is incorrect.</p>]]></text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Resposta incorreta 1</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Essa não é a resposta! 1</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Resposta incorreta 2</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Essa não é a resposta! 2</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Resposta correta</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Acertou!</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

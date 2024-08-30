@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/**** TESTES PÓS-AULA 2020****</text>
+    </category>
+    <info format="html">
+      <text><![CDATA[<p>Esta categoria contém os testes que serão aplicados após cada aula. O professor responsável pela aula deve criar a subcategoria "<b>T&lt;numero&gt;-2020-&lt;nome da aula&gt; (&lt;nome do professor&gt;)</b>"( exemplo: <b>T06-Fila (Romero) </b>) e só ele deverá editar os testes na subcategoria correspondente aos testes de sua aula.</p>]]></text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 4633201  -->
+  <question type="description">
+    <name>
+      <text>1questão</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Este teste consiste de apenas uma questão.<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>0.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 4582213  -->
+  <question type="description">
+    <name>
+      <text>2questoes</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Este questionário é composto por duas questões.<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>0.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 4612351  -->
+  <question type="description">
+    <name>
+      <text>3questoes</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Este questionário é composto por <b>três</b> questões.<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>0.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 4509584  -->
+  <question type="cloze">
+    <name>
+      <text>T2.5.2020-Heapsort</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[O GCC, um dos principais compiladores para C++, utiliza um algoritmo de ordenação conhecido como <b>IntroSort</b>. Esse algoritmo é um híbrido entre o <b>QuickSort</b>, o <b>HeapSort</b> (um outro algoritmo que vamos ver na próxima aula) e o <b>InsertionSort</b>. O <b>QuickSort</b> é usado até um determinado nível da recursão ou até um determinado tamanho de vetor. Se o nível da recursão for maior que um limite, usa-se o <b>HeapSort</b>; se o número de elementos for pequeno, executa-se o <b>InsertionSort</b>.<br><p><br>A seguir é apresentada uma implementação simplificada desse algoritmo.</p><p><b>IntroSort</b>(A)<br>1 profundidade = 2*$$\lfloor log$$(A.tamanho) $$\rfloor$$<br>2 IntroSortLoop(A, 1, A.tamanho, profundidade)</p><p><br></p><p><b>IntroSortLoop</b>(A, inicio, fim, profundidade)<br>1 <b>if </b>fim - inicio &lt; 10<br>2 &nbsp; &nbsp;<b> </b>InsertionSort(A, inicio, fim)<br>3 <b>else if</b> profundidade == 0<br>4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HeapSort(A, inicio, fim)<br>5 <b>else</b><br>6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pivo = Partition(A, inicio, fim)<br>7&nbsp; &nbsp; &nbsp; IntroSortLoop(A, {1:MULTICHOICE_S:~fim~pivo-1~pivo+1~pivo~1~%100%inicio}, {1:MULTICHOICE_S:~fim~inicio~pivo+1~pivo~1~%100%pivo-1}, {1:MULTICHOICE_S:~profundidade~profundidade+1~pivo~fim~%100%profundidade-1})<br>8&nbsp; &nbsp; &nbsp;<b> </b>IntroSortLoop(A, {1:MULTICHOICE_S:~fim~pivo-1~inicio~pivo~1~%100%pivo+1}, 
+{1:MULTICHOICE_S:~pivo-1~inicio~pivo+1~pivo~1~%100%fim}, 
+{1:MULTICHOICE_S:~profundidade~profundidade+1~pivo~fim~%100%profundidade-1})<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/**** TESTES PÓS-AULA 2020****/T1.6-2020-Fila (Romero)</text>
+    </category>
+    <info format="html">
+      <text></text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 4324618  -->
+  <question type="cloze">
+    <name>
+      <text>Teste 06.1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-816934d9-7fff-bc5c-4f8c-06bc841dfeeb"></span></p><p dir="ltr" style="">Considere duas filas <b>Q1</b> e <b>Q2</b> e as operações <b>Enqueue(Q,k)</b> e <b>Dequeue(Q)</b>. Seus conteúdos iniciais são:&nbsp;</p><p dir="ltr" style=""><b>Q1 = [ 1, 2, 3 ]</b>&nbsp; &nbsp; <b>Q2 = [4, 5, 6]&nbsp;</b></p><p dir="ltr" style="">Em seguida são executadas as operações:</p><p dir="ltr" style=""><b>Enqueue (Q1, 7)</b></p><p dir="ltr" style=""><b>Enqueue (Q2, 8)</b></p><p dir="ltr" style="">As filas ficam, então, com os valores:</p><p dir="ltr" style=""><b>Q1 = [7, 1, 2, 3 ]&nbsp; Q2 = [8, 4, 5, 6]</b></p><p dir="ltr" style="">Em seguida são executadas as operações:</p><p dir="ltr" style=""><b>Enqueue(Q2, Dequeue(Q1))</b></p><p dir="ltr" style=""><b>Enqueue(Q2, 9)</b></p><p dir="ltr" style=""><b>Enqueue(Q1, Dequeue(Q2))&nbsp;</b></p><p dir="ltr" style=""><b>Enqueue(Q2, Dequeue(Q1))</b></p><p dir="ltr" style=""><b>Enqueue (Q1, 10)</b></p><p dir="ltr" style=""><b>Dequeue (Q1)</b></p><p dir="ltr" style=""><b>Dequeue (Q2)</b></p><p dir="ltr" style="">Se a partir deste ponto executarmos operações de dequeue nas duas filas até que fiquem vazias, podemos afirmar que:</p><p dir="ltr" style="">O primeiro elemento a ser retirado de<b> Q1</b> será<b> {1:NUMERICAL:=7}</b>&nbsp; e de <b>Q2</b> será <b>{1:NUMERICAL:=4}</b></p>O último elemento a ser retirado de <b>Q1</b> será <b>{1:NUMERICAL:=10} </b>&nbsp;&nbsp;e de <b>Q2</b> será <b>{1:NUMERICAL:=2}</b><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T06-20-2-EX-V1</idnumber>
+  </question>
+
+<!-- question: 4324713  -->
+  <question type="cloze">
+    <name>
+      <text>Teste 06.2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-6ac54260-7fff-fc3a-599d-e16e1428c059"></span></p><p dir="ltr" style="">Considere duas filas <b>Q1 e Q2 </b>e as operações <b>Enqueue(Q,k) </b>e<b> Dequeue(Q). </b>Seus conteúdos iniciais são:&nbsp;</p><p dir="ltr" style="font-weight: bold;">Q1 = [ 1, 2, 3 ]&nbsp; &nbsp; Q2 = [6, 5, 4]&nbsp;</p><p dir="ltr" style="">Em seguida são executadas as operações:</p><p dir="ltr" style="font-weight: bold;">Enqueue (Q1, 7)</p><p dir="ltr" style="font-weight: bold;">Enqueue (Q2, 8)</p><p dir="ltr" style="">As filas ficam, então, com os valores:</p><p dir="ltr" style="font-weight: bold;">Q1 = [7, 1, 2, 3 ]&nbsp; Q2 = [8, 6, 5, 4]</p><p dir="ltr" style="font-weight: bold;">Em seguida são executadas as operações:</p><p dir="ltr" style="font-weight: bold;">Enqueue(Q2, Dequeue(Q1))</p><p dir="ltr" style="font-weight: bold;">Enqueue(Q2, 9)</p><p dir="ltr" style="font-weight: bold;">Enqueue(Q1, Dequeue(Q2))&nbsp;</p><p dir="ltr" style="font-weight: bold;">Enqueue(Q2, Dequeue(Q1))</p><p dir="ltr" style="font-weight: bold;">Enqueue (Q1, 10)</p><p dir="ltr" style="font-weight: bold;">Dequeue (Q1)</p><p dir="ltr" style="font-weight: bold;">Dequeue (Q2)</p><p dir="ltr" style="">Se a partir deste ponto executarmos operações de dequeue nas duas filas até que fiquem vazias, podemos afirmar que:</p><p dir="ltr" style="">O primeiro elemento a ser retirado de<span style="font-weight: bold;"> Q1 </span>será<span style="font-weight: bold;"> {2:NUMERICAL:=7}&nbsp; </span>e de<span style="font-weight: bold;"> Q2 </span>será <span style="font-weight: bold;">{2:NUMERICAL:=6}</span></p><span>O último elemento a ser retirado de</span><b> Q1 </b>será<b> {3:NUMERICAL:=10} &nbsp;&nbsp;</b>e de<b> Q2 </b>será<b> {3:NUMERICAL:=2}</b><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T06-20-2-EX-V2</idnumber>
+  </question>
+
+<!-- question: 4324747  -->
+  <question type="cloze">
+    <name>
+      <text>Teste 06.3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-2c37cc48-7fff-921a-18c8-8bbd355898ee"><p dir="ltr" style="">Considere duas filas<b> Q1 </b>e<b> Q2 </b>e as operações<b> Enqueue(Q,k) </b>e<b> Dequeue(Q). </b>Seus conteúdos iniciais são:&nbsp;</p><p dir="ltr" style="font-weight: bold;">Q1 = [ 8, 9, 10 ]&nbsp; &nbsp; Q2 = [13, 12, 11]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p dir="ltr" style="">Em seguida são executadas as operações:</p><p dir="ltr" style="font-weight: bold;">Enqueue (Q1, 14)</p><p dir="ltr" style="font-weight: bold;">Enqueue (Q2, 15)</p><p dir="ltr" style="">As filas ficam, então, com os valores:</p><p dir="ltr" style="font-weight: bold;">Q1 = [14, 8, 9, 10 ]&nbsp; Q2 = [15, 13, 12, 11]</p><p dir="ltr" style="">Em seguida são executadas as operações:</p><p dir="ltr" style="font-weight: bold;">Enqueue(Q2, Dequeue(Q1))</p><p dir="ltr" style="font-weight: bold;">Enqueue(Q2, 16)</p><p dir="ltr" style="font-weight: bold;">Enqueue(Q1, Dequeue(Q2))&nbsp;</p><p dir="ltr" style="font-weight: bold;">Enqueue(Q2, Dequeue(Q1))</p><p dir="ltr" style="font-weight: bold;">Enqueue (Q1, 17)</p><p dir="ltr" style="font-weight: bold;">Dequeue (Q1)</p><p dir="ltr" style="font-weight: bold;">Dequeue (Q2)</p><p dir="ltr" style="">Se a partir deste ponto executarmos operações de dequeue nas duas filas até que fiquem vazias, podemos afirmar que:</p><br><p dir="ltr" style="">O primeiro elemento a ser retirado de <span style="font-weight: bold;">Q1</span> será<span style="font-weight: bold;"> {2:NUMERICAL:=14}&nbsp;</span> e de <span style="font-weight: bold;">Q2 </span>será<span style="font-weight: bold;"> {2:NUMERICAL:=13}</span></p><br><p dir="ltr" style="">O último elemento a ser retirado de<span style="font-weight: bold;"> Q1 será {3:NUMERICAL:=17} &nbsp;&nbsp;</span>e de<span style="font-weight: bold;"> Q2 </span>será<span style="font-weight: bold;"> {3:NUMERICAL:=9} &nbsp;</span></p></span><br><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T06-20-2-EX-V3</idnumber>
+  </question>
+
+<!-- question: 4324781  -->
+  <question type="cloze">
+    <name>
+      <text>Teste 06.4</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-a23344f6-7fff-02b9-d2f4-38cd9363c545"></span></p><p dir="ltr" style="">Considere uma fila implementada sobre uma lista ligada simples, na qual optou-se por inserir o último elemento da fila no final da lista. Nessas condições, a partir da fila vazia, considere a seguinte sequência de comandos:</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 1);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 2);</p><p dir="ltr" style="font-weight: bold;">Dequeue(L);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 3);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 4);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 5);</p><p dir="ltr" style="font-weight: bold;">Dequeue(L);</p><p dir="ltr" style="font-weight: bold;">Dequeue(L);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, Dequeue(L));</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, L.inicio.chave + L.inicio.proximo.chave);</p><p dir="ltr" style="">Em relação à condição final da execução dos comandos:</p><p dir="ltr" style="font-weight: bold;">L.inicio.chave = {2:MCS:=5~1~2~3~4~6~7~8~9~10~NIL~ERRO}</p><p dir="ltr" style="font-weight: bold;">L.inicio.proximo.chave = {3:MCS:=4~1~2~3~5~6~7~8~9~10~NIL~ERRO}</p><p dir="ltr" style="font-weight: bold;">L.inicio.proximo.proximo.chave =&nbsp; {3:MCS:=9~1~2~3~4~5~6~7~8~10~NIL~ERRO}</p><p dir="ltr" style="font-weight: bold;">L.inicio.proximo.proximo.proximo.chave ={2:MCS:NIL~1~2~3~4~5~6~7~8~9~10~=ERRO}<br><br></p><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T06-20-2-EX-V4</idnumber>
+  </question>
+
+<!-- question: 4324787  -->
+  <question type="cloze">
+    <name>
+      <text>Teste 06.5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-374f8adf-7fff-1072-2a61-3455d4e26e3a"></span></p><p dir="ltr" style="">Considere uma fila implementada sobre uma lista ligada simples, na qual optou-se por inserir o último elemento da fila no final da lista. Nessas condições, a partir da fila vazia, considere a seguinte sequência de comandos:</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 5);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 4);</p><p dir="ltr" style="font-weight: bold;">Dequeue(L);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 3);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 2);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, Dequeue(L));</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, L.inicio.chave + L.inicio.proximo.chave);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 1);</p><p dir="ltr" style="font-weight: bold;">Dequeue(L);</p><p dir="ltr" style="font-weight: bold;">Dequeue(L);</p><p dir="ltr" style="">Em relação à condição final da execução dos comandos:</p><p dir="ltr" style="font-weight: bold;">L.inicio.chave = {2:MCS:=4~1~2~3~5~6~7~8~9~10~NIL~ERRO}</p><p dir="ltr" style="font-weight: bold;">L.inicio.proximo.chave = {3:MCS:=5~1~2~3~4~6~7~8~9~10~NIL~ERRO}</p><p dir="ltr" style="font-weight: bold;">L.inicio.proximo.proximo.chave =&nbsp; {3:MCS:=1~2~3~4~5~6~7~8~9~10~NIL~ERRO}</p><p dir="ltr" style="font-weight: bold;">L.inicio.proximo.proximo.proximo.chave ={2:MCS:NIL~1~2~3~4~5~6~7~8~9~10~=ERRO}<br></p><br><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T06-20-2-EX-V5</idnumber>
+  </question>
+
+<!-- question: 4324793  -->
+  <question type="cloze">
+    <name>
+      <text>Teste 06.6</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-f20180f2-7fff-37ee-287e-96ab4f00c215"></span></p><p dir="ltr" style="">Considere uma fila implementada sobre uma lista ligada simples, na qual optou-se por inserir o último elemento da fila no final da lista. Nessas condições, a partir da fila vazia, considere a seguinte sequência de comandos:</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 3);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 4);</p><p dir="ltr" style="font-weight: bold;">Dequeue(L);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 2);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 5);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, Dequeue(L));</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 1);</p><p dir="ltr" style="font-weight: bold;">Dequeue(L);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, L.inicio.chave + L.inicio.proximo.chave);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, Dequeue(L));</p><p dir="ltr" style="font-weight: bold;">Dequeue(L);</p><p dir="ltr" style="">Em relação à condição final da execução dos comandos:</p><p dir="ltr" style="font-weight: bold;">L.inicio.chave = {2:MCS:=1~2~3~4~5~6~7~8~9~10~NIL~ERRO}</p><p dir="ltr" style="font-weight: bold;">L.inicio.proximo.chave = {3:MCS:=9~1~2~3~4~5~6~7~8~10~NIL~ERRO}</p><p dir="ltr" style="font-weight: bold;">L.inicio.proximo.proximo.chave = {3:MCS:=5~1~2~3~4~6~7~8~9~10~NIL~ERRO}</p><b>L.inicio.proximo.proximo.proximo.chave ={2:MCS:NIL~1~2~3~4~5~6~7~8~9~10~=ERRO}</b><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T06-20-2-EX-V6</idnumber>
+  </question>
+
+<!-- question: 4324799  -->
+  <question type="cloze">
+    <name>
+      <text>Teste 06.7</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-e955177b-7fff-0e67-c71f-aeb06f753196"></span></p><p dir="ltr" style="">Considere uma fila implementada sobre uma lista ligada simples, na qual optou-se por inserir o último elemento da fila no final da lista. Nessas condições, a partir da fila vazia, considere a seguinte sequência de comandos:</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 1);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 2);</p><p dir="ltr" style="font-weight: bold;">Dequeue(L);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 5);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 4);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, Dequeue(L));</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, 3);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, Dequeue(L));</p><p dir="ltr" style="font-weight: bold;">Dequeue(L);</p><p dir="ltr" style="font-weight: bold;">Dequeue(L);</p><p dir="ltr" style="font-weight: bold;">Enqueue(L, L.inicio.chave + L.inicio.proximo.chave);</p><p dir="ltr" style="">Em relação à condição final da execução dos comandos:</p><p dir="ltr" style="font-weight: bold;">L.inicio.chave = {2:MCS:=3~1~2~4~5~6~7~8~9~10~NIL~ERRO}</p><p dir="ltr" style="font-weight: bold;">L.inicio.proximo.chave = {3:MCS:=5~1~2~3~4~6~7~8~9~10~NIL~ERRO}</p><p dir="ltr" style="font-weight: bold;">L.inicio.proximo.proximo.chave = {3:MCS:=8~1~2~3~4~5~6~7~9~10~NIL~ERRO}</p><b>L.inicio.proximo.proximo.proximo.chave ={2:MCS:NIL~1~2~3~4~5~6~7~8~9~10~=ERRO}</b><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T06-20-2-EX-V7</idnumber>
+  </question>
+
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/**** TESTES PÓS-AULA 2020****/T1.2-2020-Recursão (Romero)</text>
+    </category>
+    <info format="html">
+      <text><![CDATA[<p>Testes aplicados após a aula 2 (recursão). Responsável: Romero.</p>]]></text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 4260107  -->
+  <question type="cloze">
+    <name>
+      <text>T02-20-2-EX-V1-Trace Recursivo fazAlgo(2,4)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p dir="ltr"><span>O algoritmo <b>fazAlgo</b> apresentado a seguir tem como entrada duas variáveis inteiras <b>x</b> e <b>y</b>, com <b>y ≥ 0</b>. O início de preenchimento da tabela de rastreamento do algoritmo encontra-se abaixo. A linha 1 da tabela de rastreamento indica os conteúdos imediatamente após a chamada do algoritmo, ANTES da execução do primeiro passo do algoritmo.&nbsp;Siga essa convenção para as chamadas de função.&nbsp;<span id="docs-internal-guid-1901d50e-7fff-87d0-8ecf-c9f97dbd2e9c"></span></span></p><p dir="ltr" style="font-weight: bold;">Termine a execução do rastreamento e complete as lacunas.</p><p dir="ltr" style=""><span id="docs-internal-guid-a0345889-7fff-5db1-7f59-fbeac4323faf" style=""></span></p><p dir="ltr" style=""><img src="@@PLUGINFILE@@/T02-20-2-EX-algoritmo%20fazAlgo.jpg" alt="" width="381" height="214" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p><p></p><img src="@@PLUGINFILE@@/T02-20-2-EX-V1-Trace%20Recursivo-2-4.jpg" alt="" width="1063" height="476" role="presentation" class="img-responsive atto_image_button_text-bottom"><br>O algoritmo terminou no passo do trace (PT)&nbsp;<strong>{2:NUMERICAL:=21}</strong> retornando o valor&nbsp;<strong>{3:NUMERICAL:=16}.&nbsp; </strong>Nessa última linha temos os seguintes valores para: passo do algoritmo<span>(<span style="">PA)</span></span> =&nbsp;<strong>{3:NUMERICAL:=5} e&nbsp;&nbsp;</strong>variável <span>p</span><strong> =</strong>&nbsp;<strong>{2:NUMERICAL:=4}.</strong><br><p></p><p><br><br></p>]]></text>
+          </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T02-20-2-EX-V6</idnumber>
+  </question>
+
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/**** TESTES PÓS-AULA 2020****/T1.5-2020-Pilha (Romero)</text>
+    </category>
+    <info format="html">
+      <text></text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 4312441  -->
+  <question type="cloze">
+    <name>
+      <text>T05-20-2-EX-V1-FazAlgo(S, valor)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-75456e52-7fff-300c-5a7b-c8bf7e81b336"></span></p><p dir="ltr" style="">Considere o algoritmo a seguir.</p><p dir="ltr" style=""><b>FazAlgo(S, valor)</b>&nbsp; // S é uma pilha</p><p dir="ltr" style="">1 if Stack-Empty(S)</p><p dir="ltr" style="">2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Push(S, valor)</p><p dir="ltr" style="">3 else&nbsp; atual = Pop(S)</p><p dir="ltr" style="">4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FazAlgo(S, valor)</p><p dir="ltr" style="">5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Push(S, atual)</p><br><p dir="ltr" style="">Supondo a chamada <b>FazAlgo (MinhaPilha, 4)</b>, estando a pilha <b>MinhaPilha</b> com os valores <b>[1,2,3]</b> nesta ordem (o topo da pilha contém 3), complete as afirmações a seguir:</p><br><p dir="ltr" style="">a) após execução completa da chamada, <b>MinhaPilha</b> conterá a seguinte sequência:&nbsp;<span style="font-size: 0.9375rem;">{6:MCS:=[4,1,2,3]~[1,2,3,4]~[1,4,2,3]~[1,2,4,3]~[4,3,2,1]~[3,2,1,4]~[3,2,4,1]~[3,4,2,1]~[ ]~[4]~[1]~[2]~[3]}</span></p><p dir="ltr" style="">b) A função <b>FazAlgo(S, valor)</b> {4:MCS:=insere o valor no início de S ~insere o valor no topo de S ~deixa S apenas com o valor inserido ~insere o valor no meio de S ~não altera S ~não termina (recursão infinita) ~inverte S e insere o valor em seu topo ~inverte S e insere o valor em seu início ~deixa S vazia ~se S for vazia provoca erro de “stack underflow” }&nbsp;</p><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T05-20-2-EX-V1</idnumber>
+  </question>
+
+<!-- question: 4312450  -->
+  <question type="cloze">
+    <name>
+      <text>T05-20-2-EX-V2-FazAlgo(S, valor)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-26fb7329-7fff-8b01-83bb-e0c943ae8944"></span></p><p dir="ltr" style="">Considere o algoritmo a seguir.</p><p dir="ltr" style=""><b>FazAlgo(S, valor)</b> // S é uma pilha</p><p dir="ltr" style="">1 if Stack-Empty(S)</p><p dir="ltr" style="">2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Push(S, valor)</p><p dir="ltr" style="">3 else&nbsp; atual = Pop(S)</p><p dir="ltr" style="">4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FazAlgo(S, valor)</p><p dir="ltr" style="">5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Push(S, atual)</p><p dir="ltr" style="">Supondo a chamada <b>FazAlgo (MinhaPilha, 1)</b>, estando a pilha <b>MinhaPilha</b> com os valores <b>[4,3,2]</b> nesta ordem (o topo da pilha contém 2), complete as afirmações a seguir:</p><p dir="ltr" style="">a) após execução completa da chamada, <b>MinhaPilha</b> conterá a seguinte sequência:&nbsp;<span style="font-size: 0.9375rem;">{6:MCS:=[1,4,3,2]~[1,2,3,4]~[4,1,2,3]~[1,2,4,3]~[4,3,2,1]~[3,2,1,4]~[3,2,4,1]~[3,4,2,1]~[ ]~[4]~[1]~[2]~[3]}</span></p><p dir="ltr" style="">b) A função <b>FazAlgo(S, valor)</b> {4:MCS:=insere o valor no início de S ~insere o valor no topo de S ~deixa S apenas com o valor inserido ~insere o valor no meio de S ~não altera S ~não termina (recursão infinita) ~inverte S e insere o valor em seu topo ~inverte S e insere o valor em seu início ~deixa S vazia ~se S for vazia provoca erro de “stack underflow” }</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T05-20-2-EX-V2</idnumber>
+  </question>
+
+<!-- question: 4312456  -->
+  <question type="cloze">
+    <name>
+      <text>T05-20-2-EX-V3-FazAlgo(S, valor)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-7484d5fd-7fff-b7b2-5fd7-cec1fc3e46c5"></span></p><p dir="ltr" style="">Considere o algoritmo a seguir.</p><p dir="ltr" style=""><b>FazAlgo(S, valor)</b> // S é uma pilha</p><p dir="ltr" style="">1 if Stack-Empty(S)</p><p dir="ltr" style="">2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Push(S, valor)</p><p dir="ltr" style="">3 else&nbsp; atual = Pop(S)</p><p dir="ltr" style="">4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FazAlgo(S, valor)</p><p dir="ltr" style="">5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Push(S, atual)</p><p dir="ltr" style="">Supondo a chamada <b>FazAlgo (MinhaPilha, 0)</b>, estando a pilha <b>MinhaPilha</b> com os valores <b>[3,2,1]</b> nesta ordem (o topo da pilha contém 1), complete as afirmações a seguir:&nbsp;</p><p dir="ltr" style="">a) após execução completa da chamada, <b>MinhaPilha</b> conterá a seguinte sequência:&nbsp;<span style="font-size: 0.9375rem;">{6:MCS:=[0,3,2,1]~[1,2,3,0]~[0,1,2,3]~[1,2,0,3]~[1,0,2,3]~[3,2,1,0]~[3,2,0,1]~[3,0,2,1]~[ ]~[0]~[1]~[2]~[3]}</span></p><br><p dir="ltr" style="">b) A função <b>FazAlgo(S, valor)</b> {4:MCS:=insere o valor no início de S ~insere o valor no topo de S ~deixa S apenas com o valor inserido ~insere o valor no meio de S ~não altera S ~não termina (recursão infinita) ~inverte S e insere o valor em seu topo ~inverte S e insere o valor em seu início ~deixa S vazia ~se S for vazia provoca erro de “stack underflow” }</p><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T05-20-2-EX-V3</idnumber>
+  </question>
+
+<!-- question: 4312468  -->
+  <question type="cloze">
+    <name>
+      <text>T05-20-2-EX-V4-FazAlgo(S1, S2)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-2c15a3b6-7fff-90f1-9aad-17db09b7497c"></span></p><p dir="ltr" style="">Considere o algoritmo a seguir.</p><p dir="ltr" style=""><b>FazAlgo(S1, S2)</b> // S1 e S2 são pilhas</p><p dir="ltr" style="">1 if Stack-Empty(S1)</p><p dir="ltr" style="">2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return</p><p dir="ltr" style="">3 else&nbsp; atual = Pop(S1)</p><p dir="ltr" style="">4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Push(S2, atual)</p><p dir="ltr" style="">5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FazAlgo(S1, S2)</p><p dir="ltr" style="">Supondo a chamada <b>FazAlgo (MinhaPilha, SuaPilha)</b>, estando a pilha <b>MinhaPilha</b> com os valores <b>[1,2,3]</b> nesta ordem (o topo da pilha contém 3) e a pilha <b>SuaPilha</b> com os valores <b>[4,5,6]</b> nesta ordem (o topo da pilha contém 6), após sua execução:</p><p dir="ltr" style="">a) a pilha <b>MinhaPilha</b> conterá a sequência&nbsp;<span style="font-size: 0.9375rem;">{4:MCS:=[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[4,5,6,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4,5,6,1,2,3]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}</span></p><p dir="ltr" style="">b) a pilha <b>SuaPilha</b> conterá a sequência&nbsp;<span style="font-size: 0.9375rem;">{6:MCS:=[4,5,6,3,2,1]~[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[6,5,4,1,2,3]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4,5,6,1,2,3]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}</span></p><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T05-20-2-EX-V4</idnumber>
+  </question>
+
+<!-- question: 4312478  -->
+  <question type="cloze">
+    <name>
+      <text>T05-20-2-EX-V5-FazAlgo(S1, S2)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-3109dff7-7fff-56f5-d9a4-bb323b83aba0"><p dir="ltr" style="">Considere o algoritmo a seguir.</p><p dir="ltr" style=""><b>FazAlgo(S1, S2)</b> // S1 e S2 são pilhas</p><p dir="ltr" style="">1 if Stack-Empty(S1)</p><p dir="ltr" style="">2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return</p><p dir="ltr" style="">3 else&nbsp; atual = Pop(S1)</p><p dir="ltr" style="">4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Push(S2, atual)</p><p dir="ltr" style="">5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FazAlgo(S1, S2)</p><p dir="ltr" style="">Supondo a chamada <b>FazAlgo (MinhaPilha, SuaPilha)</b>, estando a pilha <b>MinhaPilha</b> com os valores <b>[3,2,1]</b> nesta ordem (o topo da pilha contém 1) e a pilha <b>SuaPilha</b> com os valores <b>[6,5,4]</b> nesta ordem (o topo da pilha contém 4), após sua execução:</p><p dir="ltr" style="">a) a pilha MinhaPilha conterá a sequência&nbsp;<span style="font-size: 0.9375rem;">{4:MCS:=[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[4,5,6,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4,5,6,1,2,3]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}</span></p><p dir="ltr" style="">b) a pilha SuaPilha conterá a sequência&nbsp;<span style="font-size: 0.9375rem;">{6:MCS:=[6,5,4,1,2,3]~[4,5,6,3,2,1]~[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4,5,6,1,2,3]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}</span></p></span><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T05-20-2-EX-V5</idnumber>
+  </question>
+
+<!-- question: 4312482  -->
+  <question type="cloze">
+    <name>
+      <text>T05-20-2-EX-V6-FazAlgo(S1, S2)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><b id="docs-internal-guid-cec6fa1b-7fff-7ddb-d4ca-c4fc20e15b8a"></b></p><p dir="ltr"><span id="docs-internal-guid-cec6fa1b-7fff-7ddb-d4ca-c4fc20e15b8a">Considere o algoritmo a seguir.</span></p><span id="docs-internal-guid-cec6fa1b-7fff-7ddb-d4ca-c4fc20e15b8a"><span style="font-size: 0.9375rem;"><b>FazAlgo(S1, S2)</b> // S1 e S2 são pilhas</span><br><p dir="ltr">1 if Stack-Empty(S1)</p><p dir="ltr">2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return</p><p dir="ltr">3 else&nbsp; atual = Pop(S1)</p><p dir="ltr">4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FazAlgo(S1, S2)</p><p dir="ltr">5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Push(S2, atual)</p><p dir="ltr">Supondo a chamada <b>FazAlgo (MinhaPilha, SuaPilha)</b>, estando a pilha <b>MinhaPilha</b> com os valores <b>[1,2,3]</b> nesta ordem (o topo da pilha contém 3) e a pilha <b>SuaPilha</b> com os valores <b>[4,5,6]</b> nesta ordem (o topo da pilha contém 6), após sua execução:</p><p dir="ltr">a) a pilha <b>MinhaPilha</b> conterá a sequência&nbsp;<span style="font-size: 0.9375rem;">{4:MCS:=[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[4,5,6,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4,5,6,1,2,3]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}</span></p><p dir="ltr">b) a pilha <b>SuaPilha</b> conterá a sequência&nbsp;<span style="font-size: 0.9375rem;">{6:MCS:=[4,5,6,1,2,3]~[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[6,5,4,1,2,3]~[4,5,6,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}</span></p></span><br><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T05-20-2-EX-V6</idnumber>
+  </question>
+
+<!-- question: 4312504  -->
+  <question type="cloze">
+    <name>
+      <text>T05-20-2-EX-V7-FazAlgo(S1, S2)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><span id="docs-internal-guid-d5de1337-7fff-9da1-9467-d11cbba30eb8"><p dir="ltr" style="">Considere o algoritmo a seguir.</p><p dir="ltr" style=""><b>FazAlgo(S1, S2)&nbsp;</b> // S1 e S2 são pilhas</p><p dir="ltr" style="">1 if Stack-Empty(S1)</p><p dir="ltr" style="">2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return</p><p dir="ltr" style="">3 else&nbsp; atual = Pop(S1)</p><p dir="ltr" style="">4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FazAlgo(S1, S2)</p><p dir="ltr" style="">5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Push(S2, atual)</p><p dir="ltr" style="">Supondo a chamada <b>FazAlgo (MinhaPilha, SuaPilha)</b>, estando a pilha <b>MinhaPilha</b> com os valores <b>[3,2,1]</b> nesta ordem (o topo da pilha contém 1) e a pilha <b>SuaPilha</b> com os valores <b>[6,5,4]</b> nesta ordem (o topo da pilha contém 4), após sua execução:</p><p dir="ltr" style="">a) a pilha <b>MinhaPilha</b> conterá a sequência&nbsp;<span style="font-size: 0.9375rem;">{4:MCS:=[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[6,5,4,3,2,1]~[4,5,6,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4,5,6,1,2,3]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}</span></p><p dir="ltr" style="">b) a pilha <b>SuaPilha</b> conterá a sequência&nbsp;<span style="font-size: 0.9375rem;">{6:MCS:=[6,5,4,3,2,1]~[]~[1,2,3]~[3,2,1]~[1]~[2]~[3]~[1,2,3,4,5,6]~[4,5,6,1,2,3]~[6,5,4,1,2,3]~[4,5,6,3,2,1]~[3,2,1,6,5,4]~[3,2,1,4,5,6]~[4]~[5]~[6]~[4,5,6]~[6,5,4]}</span></p></span><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber>T05-20-2-EX-V7</idnumber>
+  </question>
+
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/**** TESTES PÓS-AULA 2020****/T2.1-2020-Busca e Ordenação (Romero)</text>
+    </category>
+    <info format="html">
+      <text></text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/**** TESTES PÓS-AULA 2020****/T2.1-2020-Busca e Ordenação (Romero)/T2.1-A-Busca Binária</text>
+    </category>
+    <info format="html">
+      <text></text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 4396932  -->
+  <question type="cloze">
+    <name>
+      <text>T2.1a-V1-2020-2-Busca Binária</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Considere o algoritmo de busca binária.&nbsp;</p><p><img src="@@PLUGINFILE@@/T2.1-AlgoritmoBuscaBinaria.jpg?time=1600959368913" alt="" width="374" height="242" role="presentation" style="font-size: 0.9375rem;" class="img-responsive atto_image_button_text-bottom"></p><p><span style="font-size: 0.9375rem;">Considere o vetor&nbsp;&nbsp;<b>L1&nbsp;</b>=&nbsp;<img src="@@PLUGINFILE@@/T2.1-V1-VetorL-135689.jpg" alt="" width="165" height="50" role="presentation" class="img-responsive atto_image_button_text-bottom">&nbsp;(os números da parte inferior indicam as posições do vetor e os números maiores, acima, indicam os conteúdos das respectivas posições).</span></p><p><span style="font-size: 0.9375rem;">Supondo a execução do algoritmo&nbsp;<b>Busca-Binaria (L1, 6)</b>, indique quais deveriam ser os conteúdos das variáveis no exato momento em que a instrução de RETURN estivesse para ser executada:</span></p><p><span style="font-size: 0.9375rem;"><b>esquerda</b> = {3:NUMERICAL:=4},</span></p><p><span style="font-size: 0.9375rem;"><b>direita</b>&nbsp; &nbsp; &nbsp; = {3:NUMERICAL:=4},&nbsp;</span></p><p><span style="font-size: 0.9375rem;"><b>meio</b>&nbsp; &nbsp; &nbsp; &nbsp; =&nbsp;{4:NUMERICAL:=4}.</span></p>]]></text>
+      </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+  </question>
+
+</quiz>

@@ -1,0 +1,89 @@
+<!-- Start of Mustache template -->
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<main class="accordions">
+    <div class="card card-header">
+        <div class="buttons">
+            <label><input type="checkbox" id="open-all"> Open All</label>
+            <label><input type="checkbox" id="open-lesson"> Lesson Plan</label>
+            <label><input type="checkbox" id="open-graph"> Graph</label>
+            <label><input type="checkbox" id="open-questions"> Questions</label>
+        </div>
+    </div>
+    <div id="lessonAccordion" class="accordion">
+        <div class="card">
+            <a href="#collapseLesson" class="card-header" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseLesson">Lesson Plan</a>
+            <div id="collapseLesson" class="collapse" data-parent="#lessonAccordion">
+                <div class="card-body acordion-container">
+                    <div id="lessonplan-graph-container" class="content-container"></div>
+                </div>
+                <div class="card-footer">
+                    <div class="buttons">
+                        <form method="post" action="view.php" class="moodleform">
+                            <input type="hidden" name="id" value="{{id}}">
+                            <input type="hidden" name="send_lesson_plan" value="1">
+                            <button type="submit" class="btn btn-primary">{{send_to_api_label}}</button>
+                        </form>
+                        <button id="fullscreen-btn-lesson" class="btn btn-primary">Fullscreen Graph</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="graphAccordion" class="accordion">
+        <div class="card">
+            <a href="#collapseGraph" class="card-header" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseGraph">{{graph_label}}</a>
+            <div id="collapseGraph" class="collapse" data-parent="#graphAccordion">
+                <div class="card-body acordion-container">
+                    <div id="module-graph-container" class="graph-container"></div>
+                </div>
+                <div class="card-footer">
+                    <div class="buttons">
+                        <div class="toggle-button-group">
+                            <div id="basegraph-btn" class="btn  btn-primary">Base Graph</div>
+                            <div id="aggregategraph-btn" class="btn  btn-secondary">Aggregate Graph</div>
+                        </div>
+                        <button id="fullscreen-btn-module" class="btn btn-primary">Fullscreen Graph</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="questionsAccordion" class="accordion">
+        <div class="card">
+            <a href="#collapseQuestions" class="card-header" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseQuestions">{{questions_label}}</a>
+            <div id="collapseQuestions" class="collapse" data-parent="#questionsAccordion">
+                <div id="questionContainer" class="card-body acordion-container">
+                    <table id="questionsTable" class="question-table">
+                        <thead>
+                            <tr>
+                                <th>{{select}}</th>
+                                <th>ID</th>
+                                <th>{{graphstatus}}</th>
+                                <th>{{questiontext}}</th>
+                                <th>{{graphs}}</th>
+                                <th>{{generatequestion}}</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <div class="buttons">
+                        <form method="post" action="view.php" class="moodleform">
+                            <input type="hidden" name="id" value="{{id}}">
+                            <input type="hidden" name="insert_new_questions" value="1">
+                            <button type="submit" class="btn btn-primary">{{insert_new_questions_label}}</button>
+                        </form>
+                        <button id="send-all-btn" class="btn btn-primary">Send All</button>
+                        <button id="send-selected-btn" class="btn btn-primary">Send Selected Questions</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- End of Mustache template -->
